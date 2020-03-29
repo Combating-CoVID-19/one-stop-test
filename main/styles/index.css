@@ -20,6 +20,11 @@
 
 }
 
+body, html {
+  min-height:100%;
+}
+
+
 .inline-centering {
     text-align: center !important;
 }
