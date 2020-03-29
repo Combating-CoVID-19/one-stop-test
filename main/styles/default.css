@@ -57,7 +57,7 @@ body {
 
 .header a {
     flex-grow:1;
-  float: left;
+  /* float: left; */
   color: var(--header-anchor-text-color);
   text-align: center;
   padding: 12px;
@@ -84,19 +84,27 @@ body {
 
 @media screen and (max-width: 767px) {
   .header a {
-    float: none;
+    /* float: none; */
     display: none;
     text-align: left;
   }
 
     .logo {
         display:block !important;
-        float:center;
+        float:center !important;
         text-align: center !important;
     }
     .header {
         height:48px;
+        display:block;
     }
 
+    .expandable {
+      display:block !important;
+      float:left;
+      width: 50px;
+      margin:none;
+      flex-grow: 0;
+    }
 
 }
