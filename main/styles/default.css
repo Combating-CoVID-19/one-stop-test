@@ -58,7 +58,7 @@ body {
   /* padding: 20px 10px; */
   height: 44px;
   display:flex;
-  opacity:90%;
+  /* opacity:97%; */
 }
 
 .header a {
@@ -128,8 +128,21 @@ body {
 
 }
 
-
+.epic {
+  position: relative;
+  height:100vh;
+}
 body {
-  overflow:hidden;
+  /* overflow:hidden; */
    word-wrap: break-word;
+}
+
+.header {
+  position: fixed;
+  width:100%;
+  margin-top:-48px;
+}
+
+#content {
+  margin-top: 48px;
 }
