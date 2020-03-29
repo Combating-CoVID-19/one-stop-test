@@ -41,6 +41,7 @@
 body {
     background-color: var(--page-background-color);
     /* background: var(--page-background-grad); */
+    height: 100vh;
 }
 
 /* HEADER CODE */
@@ -49,7 +50,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 .header {
@@ -78,7 +79,7 @@ body {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
-  font-family:'Quicksand', sans-serif;
+  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 .header a:hover {

@@ -4,7 +4,7 @@
 
 :root {
     /* General Styling Variables */
-    --welcome-text-font: 'Quicksand', sans-serif;
+    --welcome-text-font: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;;
 
     /* Theme Specific Variables */
     --theme-welcome-text-color: #303030;
