@@ -7,7 +7,7 @@
 
     /* Theme Specific Variables */
     --page-background-color: rgb(130,217,228);
-    
+
     --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
 
     --toggle-theme-content: ' \25D1';
@@ -126,4 +126,10 @@ body {
       flex-grow:1;
     }
 
+}
+
+
+body {
+  overflow:hidden;
+   word-wrap: break-word;
 }
