@@ -31,7 +31,7 @@
     --header-anchor-text-color: black;
     --header-txt-color:white;
     --header-btn-bg-color: #313639;
-    --dropdown-bg-color:rgba(0,0,0,0.8);
+    --dropdown-bg-color:black;
 }
 
 /* theme toggle assets */
@@ -160,5 +160,31 @@ body {
   width:100%;
   position: fixed;
   background-color:var(--dropdown-bg-color);
+
   color:white;
+}
+
+.dropdown-content {
+  display: inherit;
+  color: var(--header-txt-color);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  height: 44px;
+}
+
+.space {
+  height:700px;
+}
+.expandable-l {
+  display:none;
+}
+.dropDown-info {
+  display:none;
+}
+
+.expandable-r {
+  display: none;
 }

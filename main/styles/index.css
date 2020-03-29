@@ -31,16 +31,3 @@ body, html {
 .inline-centering {
     text-align: center !important;
 }
-
-.space {
-  height:700px;
-}
-.expandable-l {
-  display:none;
-}
-
-
-
-.expandable-r {
-  display: none;
-}
