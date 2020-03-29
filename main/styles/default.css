@@ -71,7 +71,8 @@ body {
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
-  /* border-radius: 4px; */
+  height: 44px;
+    /* border-radius: 4px; */
     background-color: var(--header-background-color);
     color: var(--header-txt-color);
 }
@@ -94,6 +95,7 @@ body {
     /* float: none; */
     display: none;
     text-align: left;
+    height: 48px;
   }
 
     .logo {
@@ -150,4 +152,12 @@ body {
 
 .unscroll {
   overflow:hidden;
+}
+
+.dropDown-info {
+  /* height:.5px; */
+  width:100%;
+  position: fixed;
+  background-color:white;
+  color:white;
 }
