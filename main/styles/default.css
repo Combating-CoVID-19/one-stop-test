@@ -40,7 +40,7 @@
 
 body {
     background-color: var(--page-background-color);
-    background: var(--page-background-grad);
+    /* background: var(--page-background-grad); */
 }
 
 /* HEADER CODE */
