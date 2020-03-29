@@ -25,7 +25,7 @@
     --header-active-anchor-color: darkgray;
     --header-active-anchor-text-color: black;
     --header-background-color: black;
-    --header-anchor-text-color: black;
+    --header-anchor-text-color: white;
 }
 
 body {
@@ -50,7 +50,7 @@ body {
 
 .header a {
   float: left;
-  color: black;
+  color: var(--header-anchor-text-color);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -78,7 +78,7 @@ body {
   float: right;
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .header a {
     float: none;
     display: block;
