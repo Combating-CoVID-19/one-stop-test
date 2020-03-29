@@ -32,10 +32,13 @@ body {
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: 20px 10px;
+/*  padding: 20px 10px;*/
+    height: 44px;
+    display:flex;
 }
 
 .header a {
+    flex-grow:1;
   float: left;
   color: black;
   text-align: center;
@@ -56,23 +59,22 @@ body {
   color: black;
 }
 
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
 
-.header-right {
-  float: right;
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .header a {
     float: none;
-    display: block;
+    display: none;
     text-align: left;
   }
   
-  .header-right {
-    float: none;
-  }
+    .logo {
+        display:block !important;
+        float:center;
+        text-align: center !important;
+    }
+    .header {
+        height:48px;
+    }
+    
+    
 }
