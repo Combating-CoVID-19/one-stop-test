@@ -6,10 +6,18 @@
     --welcome-text-font: 'Quicksand', sans-serif;
 
     /* Theme Specific Variables */
-    --light-theme-welcome-color: #303030;
+    --theme-welcome-color: #303030;
 }
 
 h1.welcome {
     font-family: var(--welcome-text-font);
-    color: var(--light-theme-welcome-color);
+    color: var(--theme-welcome-color);
+}
+
+[page-theme=dark] {
+    --welcome-text-font: 'Times New Roman';
+}
+
+[page-theme=light] {
+    --welcome-text-font: 'Quicksand', sans-serif;
 }
