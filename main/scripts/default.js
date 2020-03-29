@@ -1,5 +1,5 @@
 function showMessage() {
-  window.alert("we dont want to talk to you. ");
+  window.alert("find a different site to search bimbo");
 }
 
 var droppedDown = false;
