@@ -11,12 +11,14 @@ function dropDown() {
           curHeight =  $('.header').height();
           autoHeight = '100vh';
         $('.header').height(curHeight).animate({height: autoHeight}, 750);
+        $('body').addClass("unscroll");
         droppedDown = true;
     } else {
       $('.header').stop();
       curHeight = $('.header').height();
       autoHeight = '48px';
       $('.header').height(curHeight).animate({height: autoHeight}, 750);
+      $('body').removeClass("unscroll");
       droppedDown = false;
     }
 }
