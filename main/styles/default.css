@@ -7,9 +7,10 @@
 
     /* Theme Specific Variables */
     --page-background-color: rgb(130,217,228);
+    
+    --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
 
-     --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
-
+    --toggle-theme-content: ' \25D1';
      /* header variables */
     --header-active-anchor-color: dodgerblue;
     --header-active-anchor-text-color: white;
@@ -30,6 +31,11 @@
     --header-anchor-text-color: black;
     --header-txt-color:white;
     --header-btn-bg-color: #313639;
+}
+
+/* theme toggle assets */
+.toggle-theme-asset:after {
+    content: var(--toggle-theme-content);
 }
 
 body {
