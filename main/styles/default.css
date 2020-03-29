@@ -13,7 +13,7 @@
      /* header variables */
     --header-active-anchor-color: dodgerblue;
     --header-active-anchor-text-color: white;
-    --header-background-color: white;
+    --header-background-color: rgba(255, 255, 255, 0.555);
     --header-txt-color: black;
     --header-btn-bg-color: #ddd;
 
@@ -26,7 +26,7 @@
     /* dark theme header code */
     --header-active-anchor-color: darkgray;
     --header-active-anchor-text-color: black;
-    --header-background-color: black;
+    --header-background-color: rgba(0, 0, 0, 0.555);
     --header-anchor-text-color: black;
     --header-txt-color:white;
     --header-btn-bg-color: #313639;
