@@ -7,14 +7,25 @@
 
     /* Theme Specific Variables */
     --page-background-color: rgb(130,217,228);
-   
+
      --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
+
+     /* header variables */
+    --header-active-anchor-color: dodgerblue;
+    --header-active-anchor-text-color: white;
+    --header-background-color: white;
+
 
 }
 
 [page-theme=dark] {
     --page-background-color: rgb(46, 46, 46);
     --page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
+    /* dark theme header code */
+    --header-active-anchor-color: darkgray;
+    --header-active-anchor-text-color: black;
+    --header-background-color: black;
+    --header-anchor-text-color: black;
 }
 
 body {
@@ -22,19 +33,21 @@ body {
     background: var(--page-background-grad);
 }
 
+/* HEADER CODE */
+
 * {box-sizing: border-box;}
 
-body { 
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
-/*  padding: 20px 10px;*/
-    height: 44px;
-    display:flex;
+  background-color: var(--header-background-color);
+  /* padding: 20px 10px; */
+  height: 44px;
+  display:flex;
 }
 
 .header a {
@@ -44,7 +57,7 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
 }
@@ -66,7 +79,7 @@ body {
     display: none;
     text-align: left;
   }
-  
+
     .logo {
         display:block !important;
         float:center;
@@ -75,6 +88,6 @@ body {
     .header {
         height:48px;
     }
-    
-    
+
+
 }
