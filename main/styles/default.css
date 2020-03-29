@@ -14,7 +14,7 @@
      /* header variables */
     --header-active-anchor-color: dodgerblue;
     --header-active-anchor-text-color: white;
-    --header-background-color: rgba(255, 255, 255, 0.555);
+    --header-background-color: rgba(255, 255, 255, 0.69);
     --header-txt-color: black;
     --header-btn-bg-color: #ddd;
     --dropdown-bg-color: white;
@@ -27,7 +27,7 @@
     /* dark theme header code */
     --header-active-anchor-color: darkgray;
     --header-active-anchor-text-color: black;
-    --header-background-color: #333333;
+    --header-background-color: rgba(0, 0, 0, 0.69);
     --header-anchor-text-color: black;
     --header-txt-color:white;
     --header-btn-bg-color: #313639;
@@ -41,7 +41,8 @@
 
 body {
     background-color: var(--page-background-color);
-    /* background: var(--page-background-grad); */
+    background: var(--page-background-grad);
+    height: 100vh;
 }
 
 /* HEADER CODE */
@@ -50,7 +51,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 .header {
@@ -80,7 +81,7 @@ body {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
-  font-family:'Quicksand', sans-serif;
+  font-family:"SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 .header a:hover {
