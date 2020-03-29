@@ -7,20 +7,33 @@
 
     /* Theme Specific Variables */
     --page-background-color: rgb(130,217,228);
-   
+    
      --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
+    
+     /* header variables */
+    --header-active-anchor-color: dodgerblue;
+    --header-active-anchor-text-color: white;
+    --header-background-color: white;
+
 
 }
 
 [page-theme=dark] {
     --page-background-color: rgb(46, 46, 46);
     --page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
+    /* dark theme header code */
+    --header-active-anchor-color: darkgray;
+    --header-active-anchor-text-color: black;
+    --header-background-color: black;
+    --header-anchor-text-color: black;
 }
 
 body {
     background-color: var(--page-background-color);
     background: var(--page-background-grad);
 }
+
+/* HEADER CODE */
 
 * {box-sizing: border-box;}
 
@@ -31,7 +44,7 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: var(--header-background-color);
   padding: 20px 10px;
 }
 
@@ -57,8 +70,8 @@ body {
 }
 
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
+  background-color: var(--header-active-anchor-color);
+  color: var(--header-active-anchor-text-color);
 }
 
 .header-right {
