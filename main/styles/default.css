@@ -1,24 +1,16 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
+
 
 :root {
     /* General Styling Variables */
-    --welcome-text-font: 'Quicksand', sans-serif;
+
 
     /* Theme Specific Variables */
-    --theme-welcome-text-color: #303030;
     --page-background-color: white;
 }
 
-
 [page-theme=dark] {
-    --theme-welcome-text-color: white;
     --page-background-color: rgb(46, 46, 46);
-}
-
-h1.welcome {
-    font-family: var(--welcome-text-font);
-    color: var(--theme-welcome-text-color);
 }
 
 body {
