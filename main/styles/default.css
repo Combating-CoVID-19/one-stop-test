@@ -22,7 +22,7 @@
 }
 
 [page-theme=dark] {
-    --page-background-color: black;
+    --page-background-color: rgb(37, 37, 37);
     --page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
     /* dark theme header code */
     --header-active-anchor-color: darkgray;
@@ -41,7 +41,7 @@
 
 body {
     background-color: var(--page-background-color);
-    background: var(--page-background-grad);
+    /* background: var(--page-background-grad); */
     height: 100vh;
 }
 
