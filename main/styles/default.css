@@ -1,5 +1,5 @@
 /* IMPORTS */
-
+@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
 
 :root {
     /* General Styling Variables */
@@ -15,6 +15,7 @@
     --header-active-anchor-text-color: white;
     --header-background-color: rgba(255, 255, 255, 0.555);
     --header-txt-color: black;
+    --header-btn-bg-color: #ddd;
 
 
 }
@@ -28,6 +29,7 @@
     --header-background-color: rgba(0, 0, 0, 0.555);
     --header-anchor-text-color: black;
     --header-txt-color:white;
+    --header-btn-bg-color: #313639;
 }
 
 body {
@@ -61,7 +63,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
     background-color: var(--header-background-color);
     color: var(--header-txt-color);
 }
@@ -69,10 +71,11 @@ body {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
+  font-family:'Quicksand', sans-serif;
 }
 
 .header a:hover {
-  background-color: #ddd;
+  background-color: var(--header-btn-bg-color);
   color: black;
 }
 
