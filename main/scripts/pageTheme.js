@@ -1,8 +1,13 @@
 var currentTheme = localStorage.getItem('page-theme');
 var autoTheme = localStorage.getItem('auto-page-theme');
 const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+var autoThemeBtn = document.getElementById('auto-theme-btn');
+
 function checkTheme() {
+    autoThemeBtn = document.getElementById('auto-theme-btn');
+    autoTheme = localStorage.getItem('auto-page-theme');
     if(autoTheme == null){
+        autoThemeBtn.innerHTML = "Auto Theme Off";
     if(currentTheme == null && currentTheme !== "dark" && currentTheme !== "light"){
         currentTheme = localStorage.getItem('page-theme');
         if(mediaQueryList.matches){
@@ -20,6 +25,7 @@ function checkTheme() {
         }
     }
 } else {
+    autoThemeBtn.innerHTML = "Auto Theme On";
     if(mediaQueryList.matches){
         localStorage.setItem('page-theme', "dark")
         document.documentElement.setAttribute('page-theme', 'dark')
@@ -30,6 +36,16 @@ function checkTheme() {
 }
 }
 
+function editAutoTheme() {
+    autoTheme = localStorage.getItem('auto-page-theme')
+    if(autoTheme == null){
+        localStorage.setItem('auto-page-theme', 'on')
+        checkTheme()
+    } else {
+        localStorage.removeItem('auto-page-theme');
+        checkTheme()
+    }
+}
 
 function changeTheme(){
     if(currentTheme == "light"){
