@@ -2,9 +2,10 @@ var currentTheme = localStorage.getItem('page-theme');
 const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
 function checkTheme() {
     if(currentTheme == null && currentTheme !== "dark" && currentTheme !== "light"){
+        currentTheme = localStorage.getItem('page-theme');
         if(mediaQueryList.matches){
             localStorage.setItem('page-theme', "dark")
-            checkTheme()
+            checkTheme();
         } else {
             localStorage.setItem('page-theme', "light");
             checkTheme();
