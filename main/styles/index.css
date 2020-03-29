@@ -25,6 +25,10 @@
 }
 
 
-.expandable {
+.expandable-l {
   display:none;
+}
+
+.expandable-r {
+  display: none;
 }
