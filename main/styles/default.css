@@ -57,7 +57,7 @@ body {
 .header a {
     flex-grow:1;
   float: left;
-  color: black;
+  color: var(--header-anchor-text-color);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -80,7 +80,7 @@ body {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 500px) {
   .header a {
     float: none;
     display: none;
