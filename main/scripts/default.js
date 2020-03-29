@@ -7,14 +7,16 @@ var droppedDown = false;
 function dropDown() {
   var el = $('.header');
   if(droppedDown == false) {
-          curHeight = "48px";
+        $('.header').stop();
+          curHeight =  $('.header').height();
           autoHeight = '100vh';
-        $('.header').height(curHeight).animate({height: autoHeight}, 1000);
+        $('.header').height(curHeight).animate({height: autoHeight}, 750);
         droppedDown = true;
     } else {
-      curHeight = "100vh";
+      $('.header').stop();
+      curHeight = $('.header').height();
       autoHeight = '48px';
-    $('.header').height(curHeight).animate({height: autoHeight}, 1000);
-    droppedDown = false;
+      $('.header').height(curHeight).animate({height: autoHeight}, 750);
+      droppedDown = false;
     }
 }
