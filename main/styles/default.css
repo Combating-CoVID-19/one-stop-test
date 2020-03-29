@@ -6,13 +6,18 @@
 
 
     /* Theme Specific Variables */
-    --page-background-color: white;
+    --page-background-color: rgb(130,217,228);
+   
+     --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
+
 }
 
 [page-theme=dark] {
     --page-background-color: rgb(46, 46, 46);
+    --page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
 }
 
 body {
     background-color: var(--page-background-color);
+    background: var(--page-background-grad);
 }

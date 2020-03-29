@@ -17,6 +17,7 @@
 .welcome {
     font-family: var(--welcome-text-font);
     color: var(--theme-welcome-text-color);
+    
 }
 
 .inline-centering {
