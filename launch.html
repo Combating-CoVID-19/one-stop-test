@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <!-- IMPORTS AND DEPENDENCIES -->
+        
+        <!-- Page Render Initialization (includes styling) (IMPORTANT Imports) -->
+        <link rel="stylesheet" type="text/css" href="main/styles/default.css">
+        <script src="main/scripts/pageTheme.js"></script>
+        <!--ADD PAGE SPECIFIC CSS LINK  HERE-->
+        <script src="main/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="main/scripts/default.js"></script>
+
+        <!-- Page Add-ons (can be loaded later) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- PAGE INFO -->
+
+        <title>Pandemicalm</title>
+    </head>
+    <body>
+        <div class="header">
+            <a class="expandable-l" onClick="dropDown()"><i class="fa fa-bars"></i>
+
+            </a>
+            <a href="#default" class="logo">Pandemicalm</a>
+              <a href="javascript:void(0)" onClick="changeTheme()" class="header-theme-toggle-button toggle-theme-asset"></a>
+              <a href="#about">About</a>
+              <a href="javascript:void(0)" onClick='showMessage()'> Contact Us </a>
+              <a href="javascript:void(0)" onClick='showMessage()'> <img class="icon"src="https://img.icons8.com/cotton/64/000000/search--v2.png"/> </a>
+              <a href="javascript:void(0)" onClick='showMessage()'> <img class="icon settings" src="https://img.icons8.com/flat_round/64/000000/settings--v1.png"/></img> </a>
+              <a class="expandable-r"><img  class="icon" src="https://img.icons8.com/cotton/64/000000/login-rounded-right--v2.png"/></a>
+          </div>
+
+          <div class="dropDown-info">
+            <a class="dropdown-content header-theme-toggle-button toggle-theme-asset" href="javascript:void(0)" onClick="changeTheme()" class="header-theme-toggle-button toggle-theme-asset" ></a>
+            <a class="dropdown-content auto-theme-btn" id="auto-theme-btn" href="javascript:void(0)" onclick="editAutoTheme()">Toggle Auto Theme</a>
+            <br />
+            <a class="dropdown-content"  href="#about">About</a>
+            <br />
+            <a class="dropdown-content"  href="javascript:void(0)" onClick='showMessage()'> Contact Us </a>
+            <br />
+            <a  class="dropdown-content" href="javascript:void(0)"> Purpose </a>
+          </div>
+
+          <div id="content">
+        
+        <div class="space"> </div>
+      </div>
+      <footer> <a href="https://icons8.com/">Icons by Icons8</a> </footer>
+
+      <!--FINAL IMPORTS-->
+      
+      
+
+
+
+        <!--FIREBASE-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+
+        <script>
+        // web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCDxdcGwKOcrGsXGxvhFamN7aHuylni_60",
+            authDomain: "combating-covid-19.firebaseapp.com",
+            databaseURL: "https://combating-covid-19.firebaseio.com",
+            projectId: "combating-covid-19",
+            storageBucket: "combating-covid-19.appspot.com",
+            messagingSenderId: "174988804680",
+            appId: "1:174988804680:web:4749b323ee6d9f05ae4e7d",
+            measurementId: "G-F72E6QSDCM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+        <!--Firebase Auth UI-->
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        <script src="main/firebase/authentication.js"></script>
+    </body>
+</html>
