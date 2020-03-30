@@ -1,6 +1,17 @@
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 function startUI() {
-    ui.start('#firebaseui-auth-container', uiConfig)
+    firebase.auth().onAuthStateChanged((user) => {
+        if(user) {
+            console.log('Logged in as ' + firebase.User.name)
+            window.location.href = "launch.html"
+        } else {
+            ui.start('#firebaseui-auth-container', uiConfig)
+            console.log('not signed in')
+        }
+
+
+      })
+
 }
 
 var uiConfig = {
@@ -31,3 +42,24 @@ var uiConfig = {
     // // Privacy policy url.
     // privacyPolicyUrl: '<your-privacy-policy-url>'
   };
+
+  function signOut() {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
+  }
+
+  function checkStatus(){
+      firebase.auth().onAuthStateChanged((user) => {
+        if(user) {
+            console.log('Logged in as ' + firebase.User.name)
+ 
+        } else {
+            console.log('not-epic')
+        }
+
+
+      })
+  }
