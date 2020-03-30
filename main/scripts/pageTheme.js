@@ -7,7 +7,7 @@ function checkTheme() {
     autoThemeBtn = document.getElementById('auto-theme-btn');
     autoTheme = localStorage.getItem('auto-page-theme');
     if(autoTheme == null){
-        autoThemeBtn.innerHTML = "Auto Theme Off";
+        autoThemeBtn.innerHTML = "Use System Theme Off";
     if(currentTheme == null && currentTheme !== "dark" && currentTheme !== "light"){
         currentTheme = localStorage.getItem('page-theme');
         if(mediaQueryList.matches){
@@ -25,7 +25,7 @@ function checkTheme() {
         }
     }
 } else {
-    autoThemeBtn.innerHTML = "Auto Theme On";
+    autoThemeBtn.innerHTML = "Use System Theme On";
     if(mediaQueryList.matches){
         localStorage.setItem('page-theme', "dark")
         document.documentElement.setAttribute('page-theme', 'dark')
