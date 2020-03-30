@@ -7,9 +7,17 @@ function checkStatus(){
           userSignedIn = true;
 
       } else {
-          console.log('not-epic')
+          window.location.href = "auth.html"
       }
 
 
     })
 }
+
+function signOut() {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
+  }
