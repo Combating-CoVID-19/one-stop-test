@@ -16,7 +16,7 @@
      /* header variables */
     --header-active-anchor-color: dodgerblue;
     --header-active-anchor-text-color: white;
-    --header-background-color: rgba(255, 255, 255, 0.69);
+    --header-background-color: rgba(255, 255, 255, 1);
     --header-txt-color: black;
     --header-btn-bg-color: #ddd;
     --dropdown-bg-color: white;
@@ -28,7 +28,7 @@
 --page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
 --header-active-anchor-color: darkgray;
 --header-active-anchor-text-color: black;
---header-background-color: rgba(0, 0, 0, 0.69);
+--header-background-color: rgba(0, 0, 0, 1);
 --header-anchor-text-color: black;
 --header-txt-color: #e1b382;
 --header-btn-bg-color: #313639;
@@ -58,11 +58,18 @@ font-family: 'Titillium Web', sans-serif;
 
 .header {
   overflow: hidden;
-  background-color: var(--header-background-color);
+  /* background-color: var(--header-background-color); */
   /* padding: 20px 10px; */
   height: 44px;
   display:flex;
   /* opacity:97%; */
+  transition: all 0.2s ease-in-out;
+}
+.header.active {
+  background-color: var(--header-background-color);
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .header a {
@@ -76,7 +83,7 @@ font-family: 'Titillium Web', sans-serif;
   line-height: 25px;
   height: 44px;
     /* border-radius: 4px; */
-    background-color: var(--header-background-color);
+    /* background-color: var(--header-background-color); */
     color: var(--header-txt-color);
 }
 
