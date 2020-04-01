@@ -17,10 +17,10 @@
     --header-active-anchor-color: dodgerblue;
     --header-active-anchor-text-color: white;
     --header-background-color: rgba(255, 255, 255, 1);
-    --header-txt-color: black;
+    --header-txt-color: rgba(0, 0, 0, 0.85);
     --header-btn-bg-color: #ddd;
     --dropdown-bg-color: white;
-
+    --header-txt-color-hover: rgba(0, 0, 0, 1);
 }
 
 [page-theme=dark] {
@@ -30,9 +30,10 @@
 --header-active-anchor-text-color: black;
 --header-background-color: rgba(0, 0, 0, 1);
 --header-anchor-text-color: black;
---header-txt-color: #e1b382;
+--header-txt-color: rgba(225, 179, 130, 0.85);
 --header-btn-bg-color: #313639;
 --dropdown-bg-color: black;
+--header-txt-color-hover: rgba(225, 179, 130, 1);
 }
 
 /* theme toggle assets */
@@ -77,7 +78,7 @@ font-family: 'Titillium Web', sans-serif;
 }
 
 .header a {
-    flex-grow:1;
+  flex-grow:1;
   /* float: left; */
   color: var(--header-anchor-text-color);
   text-align: center;
@@ -86,6 +87,7 @@ font-family: 'Titillium Web', sans-serif;
   font-size: 18px;
   line-height: 25px;
   height: 44px;
+  transition: all 0.2s ease-in-out;
     /* border-radius: 4px; */
     /* background-color: var(--header-background-color); */
     color: var(--header-txt-color);
@@ -101,7 +103,7 @@ font-family: 'Titillium Web', sans-serif;
 .header a:hover {
   /* background-color: var(--header-btn-bg-color); */
   color: black;
-  color:var(--header-txt-color);
+  color:var(--header-txt-color-hover);
 }
 
 
@@ -178,6 +180,7 @@ body {
   color:white;
 }
 
+
 .dropdown-content {
   display: inherit;
   color: var(--header-txt-color);
@@ -187,6 +190,11 @@ body {
   font-size: 18px;
   line-height: 25px;
   height: 44px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-content:hover {
+  color: var(--header-txt-color-hover);
 }
 
 .space {
@@ -214,8 +222,18 @@ body {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
+.content {
+  background-color: white;
+}
+
 footer {
   text-align:center;
   color:var(--header-txt-color) !important;
   text-decoration: none !important;
 }
+
+/* @media screen and (min-width: 800){
+  .dropDown-info {
+    display: none;
+  }
+} */
