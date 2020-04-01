@@ -224,6 +224,8 @@ body {
 /*TODO: CENTER THIS*/
 #content {
   background-color: white;
+  margin-left: 7.5vw;
+  margin-right:7.5vw;
   width: 85vw;
   border-radius: 15px;
   background-color: var(--header-background-color);
