@@ -24,16 +24,18 @@
 }
 
 [page-theme=dark] {
-    --page-background-color: rgb(37, 37, 37);
-    --page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
-    /* dark theme header code */
-    --header-active-anchor-color: darkgray;
-    --header-active-anchor-text-color: black;
-    --header-background-color: rgba(0, 0, 0, 0.69);
-    --header-anchor-text-color: black;
-    --header-txt-color:white;
-    --header-btn-bg-color: #313639;
-    --dropdown-bg-color:black;
+  --page-background-color:#2d545e;
+
+  --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
+
+  --toggle-theme-content: ' \25D1';
+   /* header variables */
+  --header-active-anchor-color: dodgerblue;
+  --header-active-anchor-text-color: white;
+  --header-background-color: #12343b;
+  --header-txt-color: #e1b382;
+  --header-btn-bg-color: #ddd;
+  --dropdown-bg-color: white;
 }
 
 /* theme toggle assets */
@@ -59,14 +61,11 @@ font-family: 'Titillium Web', sans-serif;
 
 .header {
   overflow: hidden;
-  /* background-color: var(--header-background-color); */
+  background-color: var(--header-background-color);
   /* padding: 20px 10px; */
   height: 44px;
   display:flex;
   /* opacity:97%; */
-}
-.active {
-  background-color: var(--header-background-color);
 }
 
 .header a {
