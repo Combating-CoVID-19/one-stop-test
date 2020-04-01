@@ -1,7 +1,7 @@
 /* IMPORTS */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
 :root {
     /* General Styling Variables */
     --welcome-text-font: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;;
@@ -15,7 +15,8 @@
 }
 
 .welcome {
-    font-family: var(--welcome-text-font);
+
+  font-family: 'Titillium Web', sans-serif;
     color: var(--theme-welcome-text-color);
 
 }
