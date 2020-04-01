@@ -72,6 +72,10 @@ font-family: 'Titillium Web', sans-serif;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
+.header.dropdown {
+  background-color: var(--header-background-color);
+}
+
 .header a {
     flex-grow:1;
   /* float: left; */

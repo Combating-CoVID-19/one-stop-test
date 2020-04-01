@@ -13,6 +13,7 @@ function dropDown() {
         $('body').addClass("unscroll");
         $('.dropDown-info').show();
         $('.dropdown-content').css("display", "block");
+        $('.header').addClass('dropdown');
         droppedDown = true;
     } else {
       $('.dropDown-info').stop();
@@ -24,5 +25,6 @@ function dropDown() {
       $('.dropdown-content').css("display", "none");
     }, 750);
       droppedDown = false;
+      $('.header').removeClass("dropdown")
     }
 }
