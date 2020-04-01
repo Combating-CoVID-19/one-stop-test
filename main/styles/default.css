@@ -221,9 +221,16 @@ body {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-
-.content {
+/*TODO: CENTER THIS*/
+#content {
   background-color: white;
+  width: 85vw;
+  border-radius: 15px;
+  background-color: var(--header-background-color);
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+
 }
 
 footer {
