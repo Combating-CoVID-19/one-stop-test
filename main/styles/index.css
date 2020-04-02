@@ -55,6 +55,7 @@
 
 
 .imp-btn {
+    font-family: 'Titillium Web', sans-serif;
   position: absolute;
   top:60vh;
   left:10vw;
@@ -129,4 +130,25 @@ color: #ffffff !important;
 background: #f6b93b;
 border-color: #f6b93b !important;
 transition: all 0.4s ease 0s;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .virus-img {
+      left:-200px;
+    }
+
+    #content {
+      margin-top: 700px;
+    }
+
+    .imp-btn {
+      width:40vw;
+      font-size:3vw;
+    }
+
+    .virus-img {
+      transform: scale(1.25);
+    }
 }
