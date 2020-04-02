@@ -15,9 +15,10 @@
 }
 
 .welcome {
-
+  margin-top: 20px;
   font-family: 'Titillium Web', sans-serif;
     color: var(--theme-welcome-text-color);
+    font-size: calc(6.50289vw - 6.24277px) !important;
 
 }
 
@@ -32,4 +33,3 @@ body, html {
 .inline-centering {
     text-align: center !important;
 }
-
