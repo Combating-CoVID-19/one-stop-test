@@ -58,7 +58,7 @@ html, body {
 
     transition: all 0.2s ease-in-out;
 
-    background-color: var(--header-bg-col);
+
     color: var(--header-txt-col);
 
     transition: all 0.2s ease-in-out;
@@ -176,5 +176,5 @@ html, body {
 }
 
 .active  a{
-  background-color:transparent !important;
+  background-color: var(--header-bg-col) !important;
 }

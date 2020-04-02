@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
 
 :root {
   --sbbtl-txt-col: white;
+  --txt-col:black;
+}
+
+[page-theme=dark] {
+    --sbbtl-txt-col: black;
+    --txt-col:white;
 }
 
 .virus-img-cntnr {
@@ -14,13 +20,24 @@
 }
 
 .virus-img {
+
   width:100%;
     position:fixed;
     top:0;
     animation: mymove 10s infinite;
 }
 
+.OSH {
+    opacity:0;
+}
 
+.blurb-1, .blurb-2, .blurb-3, .blurb-4, .blurb-5, .blurb-6 {
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 20px;
+    float:right;
+    color:grey;
+    margin-left:10px;
+}
 
 @media screen and (min-width: 1200px) {
   .img-top {
@@ -54,12 +71,13 @@
 
 
 .sbttl {
+
+  left: 25vw;
+
   position: absolute;
+  top:15vh;
 
-  right:10px;
-  top:50px;
-
-  text-align:right;
+  text-align:center;
 
   margin-top: 0px;
   margin-bottom:0px;
@@ -78,17 +96,19 @@
     font-family: 'Titillium Web', sans-serif;
   position: absolute;
   top:60vh;
-  left:10vw;
+  left:42.5vw;
   right:75vw;
   width:15vw;
+
 }
 
-.imp-btn-2 {
+.imp-btn-1, .imp-btn-2, .imp-btn-3, .imp-btn-4, .imp-btn-5, .imp-btn-6 {
     font-family: 'Titillium Web', sans-serif;
-    display:none;
+    margin-bottom:20px;
 }
 
 .img-elements-scroll {
+    width:200%;
     position: absolute;
     top: 80vh;
     left: 48vw;
@@ -97,12 +117,13 @@
 }
 
 #content {
+  width:100%;
   display:flex;
   margin-top:540px;
-  height:300px;
+  height:inherit;
   position: relative;
 
-  background-color: white;
+  background-color: var(--sbbtl-txt-col);
 
   background-color: var(--header-background-color);
 
@@ -112,55 +133,51 @@
   z-index:5;
 }
 
-#content-2 {
+#content-2, #content-3, #content-4, #content-5, #content-6, #content-7 {
+  width:100%;
   display:flex;
   margin-top:0px;
-  height:2000px;
+    height:inherit;
   position: relative;
-
-  background-color: white;
+  margin-top: 200px;
+  background-color: var(--sbbtl-txt-col);
 
   background-color: var(--header-background-color);
 
-  z-index:8;
+  z-index:5;
 }
 #stuff-l {
   flex-grow: 1;
   position:relative;
-  background-color: yellow;
+  background-color: var(--sbbtl-txt-col);
   height:100%;
   width:50%;
 }
 #stuff-r {
   flex-grow: 1;
   position:relative;
-  background-color: var(--header-bg-col);
-  height:100%;
+  background-color: var(--sbbtl-txt-col);
   width:50%;
 }
 
 
 #stuff-2-r {
   flex-grow:1;
-  z-index:7;
   position:relative;
-  background-color: var(--header-bg-col);
-  height:100%;
+  background-color: var(--sbbtl-txt-col);
+
   width:50%;
 }
 
 #stuff-2-l {
   flex-grow: 1;
-  z-index:7;
   position:relative;
-  background-color: var(--header-bg-col);
+  background-color: var(--sbbtl-txt-col);
   height:100%;
-  width: 40%;
+  width: 50%;
 }
 
-.better {
-  z-index:6 !important;
-}
+
 
 .example_c {
 color: #494949 !important;
@@ -206,16 +223,33 @@ transition: all 0.4s ease 0s;
   text-align: center;
 }
 
-.txt {
+.txt-1, .txt-2, .txt-3, .txt-4, .txt-5 {
+  margin-bottom: 4px;
   margin-left:10px;
   margin-right: 10px;
   font-family: 'Titillium Web', sans-serif;
-    color: black;
+    color: var(--txt-col);
     font-size: 45px;
-    display:none;
 }
 
-
-.txt a {
+.white {
+  color: var(--txt-col);
+}
+.txt-1 a {
+  color:red;
+}
+.txt-2 a {
+  color:red;
+}
+.txt-3 a {
+  color:red;
+}
+.txt-4 a {
+  color:red;
+}
+.txt-5 a {
+  color:red;
+}
+.txt-6 a {
   color:red;
 }
