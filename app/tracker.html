@@ -60,4 +60,32 @@
 
     <footer> <a href="https://icons8.com/">Icons by Icons8</a> </footer>
   </body>
+  
+        <!--FIREBASE-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+
+        <script>
+        // web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCDxdcGwKOcrGsXGxvhFamN7aHuylni_60",
+            authDomain: "combating-covid-19.firebaseapp.com",
+            databaseURL: "https://combating-covid-19.firebaseio.com",
+            projectId: "combating-covid-19",
+            storageBucket: "combating-covid-19.appspot.com",
+            messagingSenderId: "174988804680",
+            appId: "1:174988804680:web:4749b323ee6d9f05ae4e7d",
+            measurementId: "G-F72E6QSDCM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+        <script src="../main/scripts/tracker.js"></script>
 </html>
