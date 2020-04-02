@@ -8,14 +8,32 @@
 }
 
 .virus-img-cntnr {
+  width:100%;
     z-index:1;
     position:fixed;
 }
 
 .virus-img {
+  width:100%;
     position:fixed;
     top:0;
     animation: mymove 10s infinite;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .img-top {
+    width:100%;
+  }
+
+  .virus-img {
+    width:100%;
+  }
+
+  .virus-img-cntnr {
+    width:100%;
+  }
 }
 
 @keyframes mymove {
@@ -33,6 +51,8 @@
   height:100%;
 }
 
+
+
 .sbttl {
   position: absolute;
 
@@ -49,7 +69,7 @@
 
   font-family: 'Titillium Web', sans-serif;
     color: var(--sbbtl-txt-col);
-    font-size: 5vw !important;
+    font-size: 55px !important;
 
 }
 
@@ -72,8 +92,9 @@
 }
 
 #content {
+  display:flex;
   margin-top:540px;
-  height:250px;
+  height:500px;
   position: relative;
 
   background-color: white;
@@ -87,6 +108,7 @@
 }
 
 #content-2 {
+  display:flex;
   margin-top:0px;
   height:2000px;
   position: relative;
@@ -97,19 +119,40 @@
 
   z-index:8;
 }
-#stuff {
+#stuff-l {
+  flex-grow: 1;
+  position:relative;
+  background-color: yellow;
+  height:100%;
+  width:45%;
+}
+#stuff-r {
+  flex-grow: 1;
   position:relative;
   background-color: var(--header-bg-col);
   height:100%;
-  width:100%;
+  width:55%;
 }
-#stuff-2 {
+
+
+#stuff-2-r {
+  flex-grow:1;
   z-index:7;
   position:relative;
   background-color: var(--header-bg-col);
   height:100%;
-  width:100%;
+  width:50%;
 }
+
+#stuff-2-l {
+  flex-grow: 1;
+  z-index:7;
+  position:relative;
+
+  height:100%;
+  width: 40%;
+}
+
 .better {
   z-index:6 !important;
 }
@@ -151,4 +194,15 @@ transition: all 0.4s ease 0s;
     .virus-img {
       transform: scale(1.25);
     }
+}
+
+.stuff-txt {
+  width:50%;
+  text-align: center;
+}
+
+.txt {
+  font-family: 'Titillium Web', sans-serif;
+    color: var(--sbbtl-txt-col);
+    font-size: 55px !important;
 }
