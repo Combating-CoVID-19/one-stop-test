@@ -138,6 +138,13 @@ html, body {
     .dropdown-navbar {
       margin-top:48px;
     }
+    .sbttl {
+      font-size: 25px !important;
+    }
+
+    .txt {
+      font-size: 30px !important;
+    }
 
 }
 
