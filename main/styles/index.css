@@ -1,57 +1,116 @@
-/* IMPORTS */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
+
+
 :root {
-    /* General Styling Variables */
-    --welcome-text-font: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;;
-
-    /* Theme Specific Variables */
-    --theme-welcome-text-color: white;
+  --sbbtl-txt-col: white;
 }
 
-[page-theme=dark] {
-    --theme-welcome-text-color: white;
+.virus-img-cntnr {
+    z-index:1;
+    position:fixed;
 }
 
-.img-top {
-  /* position:absolute; */
-  width:auto;
-  overflow:hidden;
+.virus-img {
+    position:fixed;
+    top:0;
+    animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  0% {top: -44px}
+  50% {top: 0px;}
+  100% {top: -44px}
+}
+
+.img-elements-cntnr {
+  z-index:2;
+  position:fixed;
+  top:0px;
+  overflow: hidden;
+  width:100%;
   height:100%;
 }
 
-.welcome {
-  margin-bottom:0px;
-  z-index:2;
-  position:absolute;
-  text-align:right;
-  /* margin-right: 10px; */
-  margin-top: 0px;
-  width:50vw;
+.sbttl {
+  position: absolute;
+
   right:10px;
-  /* float:right; */
+  top:50px;
+
+  text-align:right;
+
+  margin-top: 0px;
+  margin-bottom:0px;
+
+  width:50vw;
+
+
   font-family: 'Titillium Web', sans-serif;
-    color: var(--theme-welcome-text-color);
+    color: var(--sbbtl-txt-col);
     font-size: 5vw !important;
 
 }
 
+
 .imp-btn {
-  position:absolute;
+  position: absolute;
   top:60vh;
   left:10vw;
   right:75vw;
   width:15vw;
 }
 
-.imp-scroll {
-  position:absolute;
-  top:80vh;
-  left:48vw;
-  right:48vw;
-  width:4vw;
+.img-elements-scroll {
+    position: absolute;
+    top: 80vh;
+    left: 48vw;
+    right: 48vw;
+    width: 4vw;
+}
 
+#content {
+  margin-top:640px;
+  height:250px;
+  position: relative;
+
+  background-color: white;
+
+  background-color: var(--header-background-color);
+
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  z-index:5;
+}
+
+#content-2 {
+  margin-top:0px;
+  height:2000px;
+  position: relative;
+
+  background-color: white;
+
+  background-color: var(--header-background-color);
+
+  z-index:8;
+}
+#stuff {
+  position:relative;
+  background-color: var(--header-bg-col);
+  height:100%;
+  width:100%;
+}
+#stuff-2 {
+  z-index:7;
+  position:relative;
+  background-color: var(--header-bg-col);
+  height:100%;
+  width:100%;
+}
+.better {
+  z-index:6 !important;
 }
 
 .example_c {
@@ -71,45 +130,3 @@ background: #f6b93b;
 border-color: #f6b93b !important;
 transition: all 0.4s ease 0s;
 }
-
-.imagehead {
-  z-index:4;
-  top:0px;
-  position:fixed;
-  overflow: hidden;
-  width:100%;
-}
-
-@media screen and (max-width: 620px) {
-  .imagehead {
-    top:48px !important;
-
-  }
-}
-
-.welcome, .imp-btn, .imp-scroll{
-  margin-top:44px;
-}
-
-body, html {
-  min-height:100%;
-  width:100%;
-  margin:0;
-  /* overflow:hidden; */
-}
-
-
-.inline-centering {
-    text-align: center !important;
-}
-
-
-
-
-
-
-
-
-
-
-/* SCROLL INDICATOR CODE PUT ALL NEW CSS CODE ABOVE THIS SO THERE ISNT A GIANT BLOCK BETWEEN THE ACTUAL CSS WE CODE */
