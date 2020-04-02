@@ -1,10 +1,10 @@
 $(function() {
     $(window).on("scroll", function() {
         if($(window).scrollTop() > 20) {
-            $(".header").addClass("active");
+            $(".header").removeClass("active");
         } else {
             //remove the background property so it comes transparent again (defined in your css)
-           $(".header").removeClass("active");
+           $(".header").addClass("active");
         }
 
         if($(window).scrollTop() > $(".better").height()*.5) {
