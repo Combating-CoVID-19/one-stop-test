@@ -8,34 +8,24 @@
 
 
     /* Theme Specific Variables */
-    --page-background-color: rgb(35, 185, 255);
-
-    --page-background-grad: linear-gradient(90deg, rgba(130,217,228,1) 0%, rgba(165,230,206,1) 100%);
-
+    --page-background-color: #212654;
     --toggle-theme-content: ' \25D1';
      /* header variables */
-    --header-active-anchor-color: dodgerblue;
-    --header-active-anchor-text-color: white;
-    --header-background-color: rgba(255, 255, 255, 1);
-    --header-txt-color: rgba(0, 0, 0, 0.85);
+    --header-background-color: #212654;
+    --header-txt-color: white;
     --header-btn-bg-color: #ddd;
     --dropdown-bg-color: white;
     --header-txt-color-hover: rgba(0, 0, 0, 1);
-    --header-shadow: rgba(0, 0, 0, 0.25);
 }
 
 [page-theme=dark] {
   --page-background-color: rgb(37, 37, 37);
---page-background-grad: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,115,127,1) 35%);
---header-active-anchor-color: darkgray;
---header-active-anchor-text-color: black;
 --header-background-color: rgba(0, 0, 0, 1);
 --header-anchor-text-color: black;
 --header-txt-color: rgba(225, 179, 130, 0.85);
 --header-btn-bg-color: #313639;
 --dropdown-bg-color: black;
 --header-txt-color-hover: rgba(225, 179, 130, 1);
---header-shadow: rgba(95, 95, 95, 0.25);
 }
 
 /* theme toggle assets */
@@ -45,23 +35,23 @@
 
 body {
     background-color: var(--page-background-color);
-    /* background: var(--page-background-grad); */
-    height: 100vh;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 /* HEADER CODE */
 
 * {box-sizing: border-box;}
 
-body {
-  margin: 0;
-  font-family: 'Lora', serif;
-font-family: 'Titillium Web', sans-serif;
-}
 
 .header {
+    position: fixed;
+    width:100%;
+    top:0;
   overflow: hidden;
-  /* background-color: var(--header-background-color); */
+  z-index:3;
+  /* background-color: ; */
+  background-color: var(--header-background-color);
   /* padding: 20px 10px; */
   height: 44px;
   display:flex;
@@ -69,10 +59,10 @@ font-family: 'Titillium Web', sans-serif;
   transition: all 0.2s ease-in-out;
 }
 .header.active {
-  background-color: var(--header-background-color);
-  -webkit-box-shadow: 0 1px 5px var(--header-shadow);
-  -moz-box-shadow: 0 1px 5px var(--header-shadow);
-  box-shadow: 0 1px 5px var(--header-shadow);
+  background-color: transparent;
+  /* -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); */
 }
 
 .header.dropdown {
@@ -159,15 +149,11 @@ body {
    word-wrap: break-word;
 }
 
-.header {
-  position: fixed;
-  width:100%;
-  margin-top:-48px;
-}
 
-#content {
+
+/* #content {
   margin-top: 48px;
-}
+} */
 
 .unscroll {
   overflow:hidden;
@@ -200,7 +186,7 @@ body {
 }
 
 .space {
-  height:100px;
+  height:1200px;
 }
 .expandable-l {
   display:none;
@@ -224,18 +210,19 @@ body {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 /*TODO: CENTER THIS*/
-/* #content {
+#content {
+  margin-top:640px;
+  position: relative;
+  /* margin-top:-10px; */
   background-color: white;
-  /* margin-left: 7.5vw;
-  margin-right:7.5vw;
-  width: 85vw; */
-  /* border-radius: 15px; */
+  /* margin-top:50px; */
   background-color: var(--header-background-color);
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fvirus%2F&psig=AOvVaw3EYph_pXS1q1rhyzNyfIjn&ust=1585875365129000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKC-kZ7EyOgCFQAAAAAdAAAAABAD");
 
-} */
+}
 
 footer {
   text-align:center;

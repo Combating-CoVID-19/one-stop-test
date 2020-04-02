@@ -7,19 +7,87 @@
     --welcome-text-font: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;;
 
     /* Theme Specific Variables */
-    --theme-welcome-text-color: #303030;
+    --theme-welcome-text-color: white;
 }
 
 [page-theme=dark] {
     --theme-welcome-text-color: white;
 }
 
+.img-top {
+  /* position:absolute; */
+  width:auto;
+  overflow:hidden;
+  height:100%;
+}
+
 .welcome {
-  margin-top: 20px;
+  margin-bottom:0px;
+  z-index:2;
+  position:absolute;
+  text-align:right;
+  /* margin-right: 10px; */
+  margin-top: 0px;
+  width:50vw;
+  right:10px;
+  /* float:right; */
   font-family: 'Titillium Web', sans-serif;
     color: var(--theme-welcome-text-color);
-    font-size: calc(6.50289vw - 6.24277px) !important;
+    font-size: 5vw !important;
 
+}
+
+.imp-btn {
+  position:absolute;
+  top:60vh;
+  left:10vw;
+  right:75vw;
+  width:15vw;
+}
+
+.imp-scroll {
+  position:absolute;
+  top:80vh;
+  left:48vw;
+  right:48vw;
+  width:4vw;
+
+}
+
+.example_c {
+color: #494949 !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ffffff;
+padding: 20px;
+border: 4px solid #494949 !important;
+display: inline-block;
+transition: all 0.4s ease 0s;
+}
+
+.example_c:hover {
+color: #ffffff !important;
+background: #f6b93b;
+border-color: #f6b93b !important;
+transition: all 0.4s ease 0s;
+}
+
+.imagehead {
+  top:0px;
+  position:fixed;
+  overflow: hidden;
+  width:100%;
+}
+
+@media screen and (max-width: 620px) {
+  .imagehead {
+    top:48px !important;
+
+  }
+}
+
+.welcome, .imp-btn, .imp-scroll{
+  margin-top:44px;
 }
 
 body, html {
@@ -33,3 +101,14 @@ body, html {
 .inline-centering {
     text-align: center !important;
 }
+
+
+
+
+
+
+
+
+
+
+/* SCROLL INDICATOR CODE PUT ALL NEW CSS CODE ABOVE THIS SO THERE ISNT A GIANT BLOCK BETWEEN THE ACTUAL CSS WE CODE */
