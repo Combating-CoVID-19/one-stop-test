@@ -13,6 +13,7 @@
   --header-txt-col: white;
   --dropdown-bg-col: #212654;
   --dropdown-txt-col:white;
+  --header-txt-col-hover: rgb(175, 175, 175);
 }
 
 [page-theme=dark] {
@@ -78,6 +79,16 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.toggle-theme-asset {
+  transition: all 0.2s ease-in-out;
+}
+.toggle-theme-asset:before {
+  content: ' \25D1';
+}
+/* .toggle-theme-asset:hover:hover:before {
+  content: ' \25D1';
+  rotate: 180deg;
+} */
 
 /* MOBILE */
 
