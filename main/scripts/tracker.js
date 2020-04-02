@@ -13,6 +13,7 @@ var x=0;
 
 var covidData = firebase.database().ref('CoVIDdata/');
 covidData.on('value', function(snapshot) {
+    countries = []
 //   addData(snapshot.val().countryArray.Countries);
 retrievedData = snapshot.val();
   for(i=0; snapshot.val().countryArray.Countries.length>i; i++){
@@ -25,23 +26,29 @@ retrievedData = snapshot.val();
 
 
 function addData(){
-    
+
         if(countries.length > x){
 
         var currentElement = document.getElementById(countries[x])
         if(currentElement){
-            console.log('indeed found')
+            if(currentElement.innerHTML !== retrievedData[countries[x]].Confirmed){
+            console.log('dta updated')
+            var currentCountryElement = document.getElementById(countries[x])
+            currentCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
+            }
         } else {
             currentCountry = countries[x];
-            var newCountryElement = document.createElement('a')
+            var newCountryElement = document.createElement('a');
+            var newBreak = document.createElement('br')
             $(newCountryElement).attr('id', countries[x]);
             newCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
             content.appendChild(newCountryElement);
+            content.appendChild(newBreak)
         }
         x++
         addData()
         }
-
+ 
         // for (var key in retrievedData) {
         //     if (retrievedData.hasOwnProperty(key)) {
         //         console.log(key)
