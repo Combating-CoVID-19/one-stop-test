@@ -73,6 +73,7 @@ transition: all 0.4s ease 0s;
 }
 
 .imagehead {
+  z-index:4;
   top:0px;
   position:fixed;
   overflow: hidden;

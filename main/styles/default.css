@@ -16,6 +16,7 @@
     --header-btn-bg-color: #ddd;
     --dropdown-bg-color: white;
     --header-txt-color-hover: rgba(0, 0, 0, 1);
+    --default-text: black;
 }
 
 [page-theme=dark] {
@@ -26,6 +27,7 @@
 --header-btn-bg-color: #313639;
 --dropdown-bg-color: black;
 --header-txt-color-hover: rgba(225, 179, 130, 1);
+--default-text:white;
 }
 
 /* theme toggle assets */
@@ -49,7 +51,7 @@ body {
     width:100%;
     top:0;
   overflow: hidden;
-  z-index:3;
+  z-index:10;
   /* background-color: ; */
   background-color: var(--header-background-color);
   /* padding: 20px 10px; */
@@ -161,17 +163,19 @@ body {
 
 .dropDown-info {
   /* height:.5px; */
+  margin-top:48px;
   width:100%;
-  position: fixed;
+  z-index:9;
+  position: relative;
   background-color:var(--dropdown-bg-color);
 
-  color:white;
+  color:var(--default-txt);
 }
 
 
 .dropdown-content {
   display: inherit;
-  color: var(--header-txt-color);
+  color: var(--default-text);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -221,7 +225,7 @@ body {
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fvirus%2F&psig=AOvVaw3EYph_pXS1q1rhyzNyfIjn&ust=1585875365129000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKC-kZ7EyOgCFQAAAAAdAAAAABAD");
-
+  z-index:6;
 }
 
 footer {
