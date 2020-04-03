@@ -1,4 +1,8 @@
 .authspace {
     height: 30vh;
 }
+h1.welcome.inline-centering {
+    font-family: sans-serif;
+    text-align: center;
+}
 
