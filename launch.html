@@ -1,63 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width">
-        <!-- IMPORTS AND DEPENDENCIES -->
+
         
-        <!-- Page Render Initialization (includes styling and authentication) (IMPORTANT Imports) -->
-        <link rel="stylesheet" type="text/css" href="main/styles/default.css">
-        <link rel="stylesheet" type="text/css" href="main/styles/auth.css">
-        <!--ADD PAGE SPECIFIC CSS LINK  HERE-->
-        <link rel="stylesheet" type="text/css" href="main/styles/index.css">
-
-        <script src="main/jQuery/jquery-3.4.1.min.js"></script>
-        <script src="main/scripts/default.js"></script>
-
-        <!-- Page Add-ons (can be loaded later) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!-- PAGE INFO -->
-
-        <title>Pandemicalm</title>
-    </head>
-    <body>
-        <div class="header">
-            <a class="expandable-l" onClick="dropDown()"><i class="fa fa-bars"></i>
-
-            </a>
-            <a href="index.html" class="logo">Pandemicalm</a>
-              <a href="javascript:void(0)" onClick="changeTheme()" class="header-theme-toggle-button toggle-theme-asset"></a>
-              <a href="#about">About</a>
-              <a href="javascript:void(0)" onClick='showMessage()'> Contact Us </a>
-              <a href="javascript:void(0)" onClick='showMessage()'> <img class="icon"src="https://img.icons8.com/cotton/64/000000/search--v2.png"/> </a>
-              <a href="javascript:void(0)" onClick='showMessage()'> <img class="icon settings" src="https://img.icons8.com/flat_round/64/000000/settings--v1.png"/></img> </a>
-              <a class="expandable-r" href="launch.html"><img  class="icon" src="https://img.icons8.com/cotton/64/000000/login-rounded-right--v2.png"/></a>
-          </div>
-
-          <div class="dropDown-info">
-            <a class="dropdown-content header-theme-toggle-button toggle-theme-asset" href="javascript:void(0)" onClick="changeTheme()" class="header-theme-toggle-button toggle-theme-asset" ></a>
-            <a class="dropdown-content auto-theme-btn" id="auto-theme-btn" href="javascript:void(0)" onclick="editAutoTheme()">Toggle Auto Theme</a>
-            <br />
-            <a class="dropdown-content"  href="#about">About</a>
-            <br />
-            <a class="dropdown-content"  href="javascript:void(0)" onClick='showMessage()'> Contact Us </a>
-            <br />
-            <a  class="dropdown-content" href="javascript:void(0)"> Purpose </a>
-          </div>
-
-          <div id="content">
-
-
-      </div>
-      <div class="space"></div>
-      <footer> <a href="https://icons8.com/">Icons by Icons8</a> </footer>
-
-      <!--FINAL IMPORTS-->
-      <script src="main/scripts/pageTheme.js"></script>
-      
-
-
-
         <!--FIREBASE-->
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
@@ -89,5 +34,17 @@
 
         <script src="main/firebase/checkLaunchAuthStatus.js"></script>
         <script>checkStatus()</script>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- PAGE INFO -->
+
+        <title>Launching App | Pandemicalm</title>
+    </head>
+    <body>
+ 
+      
+
+
+
     </body>
 </html>

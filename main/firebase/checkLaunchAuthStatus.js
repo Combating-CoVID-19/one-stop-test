@@ -5,7 +5,7 @@ function checkStatus(){
       if(user) {
           console.log('Logged in as ' + firebase.User.name)
           userSignedIn = true;
-
+          window.location.href = "app/index.html"
       } else {
           window.location.href = "auth.html"
       }
