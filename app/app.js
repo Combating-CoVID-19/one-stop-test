@@ -29,8 +29,8 @@ SCALE = {
 };
 
 SPEED = {
-  MIN: 0.2,
-  MAX: 1.0
+  MIN: -.5,
+  MAX: .5
 };
 
 ALPHA = {
