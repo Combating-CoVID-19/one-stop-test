@@ -20,6 +20,7 @@ retrievedData = snapshot.val();
       countries.push(snapshot.val().countryArray.Countries[i])
   }
  x=0;
+ console.log('data updated on remote')
   addData()
 });
 
@@ -28,8 +29,12 @@ retrievedData = snapshot.val();
 function addData(){
 
         if(countries.length > x){
+            currentCountry = countries[x];
+            if(currentCountry == "US"){
+                currentCountry = 'United States'
+            }
+            var currentElement = document.getElementById(currentCountry)
 
-        var currentElement = document.getElementById(countries[x])
         if(currentElement){
 
             if(currentElement.innerHTML != retrievedData[countries[x]].Confirmed){
@@ -40,10 +45,6 @@ function addData(){
         } else {
             var list = document.getElementById('tracker-list')
             var newDiv = document.createElement('div');
-            currentCountry = countries[x];
-            if(currentCountry == "US"){
-                currentCountry = 'United States'
-            }
             var newCountryElement = document.createElement('li');
             var newBreak = document.createElement('br')
             $(newCountryElement).attr('id', currentCountry);
