@@ -99,10 +99,26 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
+
   .header a {
     display: none;
     height: 48px;
   }
+
+      .expandable-l, .expandable-r {
+          display:block !important;
+      }
+
+      #stuff-2-r {
+      display:none !important;
+      flex-grow:0;
+    }
+
+      #stuff-r {
+      display:none !important;
+      flex-grow:0;
+    }
+
 
     .logo {
         display:block !important;
@@ -148,7 +164,9 @@ html, body {
 
 }
 
-
+.expandable-l {
+    display:none;
+}
 .dropdown-navbar {
   top:0;
   height:0;
@@ -182,13 +200,13 @@ html, body {
 }
 
 .dropdown a{
- 
+
     background-color: var(--header-bg-col) !important;
-  
+
 }
 .a.mobile-navbar-l {
   text-align-last: left !important;
-} 
+}
 a.mobile-navbar-l {
   text-align-last: left;
 }
