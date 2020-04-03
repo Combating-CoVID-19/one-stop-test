@@ -43,8 +43,6 @@
   .img-top {
     width:108%;
     margin-left: -2px;
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
   }
 
   .virus-img {
