@@ -189,3 +189,6 @@ html, body {
 .a.mobile-navbar-l {
   text-align-last: left !important;
 } 
+a.mobile-navbar-l {
+  text-align-last: left;
+}
