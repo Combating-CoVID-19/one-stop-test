@@ -180,3 +180,12 @@ html, body {
 .active  a{
   background-color: var(--header-bg-col) !important;
 }
+
+.dropdown a{
+ 
+    background-color: var(--header-bg-col) !important;
+  
+}
+.a.mobile-navbar-l {
+  text-align-last: left !important;
+} 

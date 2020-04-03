@@ -1,0 +1,15 @@
+:root {
+    --bg-color: rgb(0, 72, 114);
+}
+[page-theme="dark"]{
+    --bg-color: rgb(32, 32, 32);
+}
+.tracker-content {
+    margin-top: 15%;
+}
+
+
+body {
+    background-color: var(--bg-color);
+
+}

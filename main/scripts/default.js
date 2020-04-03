@@ -26,5 +26,6 @@ function dropDown() {
     }, 750);
       droppedDown = false;
       $('.header').removeClass("dropdown")
+
     }
 }
