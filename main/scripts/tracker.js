@@ -41,13 +41,16 @@ function addData(){
             var list = document.getElementById('tracker-list')
             var newDiv = document.createElement('div');
             currentCountry = countries[x];
-            var newCountryElement = document.createElement('a');
+            if(currentCountry == "US"){
+                currentCountry = 'United States'
+            }
+            var newCountryElement = document.createElement('li');
             var newBreak = document.createElement('br')
-            $(newCountryElement).attr('id', countries[x]);
+            $(newCountryElement).attr('id', currentCountry);
+            $(newCountryElement).attr('key', currentCountry)
             newCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
             // content.appendChild(list);
             list.appendChild(newCountryElement)
-            list.appendChild(newBreak)
         }
         x++
         addData()
