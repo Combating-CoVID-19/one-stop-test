@@ -203,6 +203,11 @@ transition: all 0.4s ease 0s;
 
 @media screen and (max-width: 767px) {
 
+    #stuff-2-r {
+    display:none !important;
+    flex-grow:0;
+  }
+
     #stuff-r {
     display:none !important;
     flex-grow:0;
@@ -218,6 +223,8 @@ transition: all 0.4s ease 0s;
 
     .imp-btn {
       width:40vw;
+      left:30vw;
+      right:30vw;
       font-size:3vw;
     }
 
@@ -241,7 +248,7 @@ transition: all 0.4s ease 0s;
 }
 
 .white {
-  color: var(--txt-col);
+  color: white;
 }
 .txt-1 a {
   color:red;
