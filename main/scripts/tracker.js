@@ -84,7 +84,7 @@ function addData(){
 function createChart() {
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'pie',
         data: {
             labels: countries,
             datasets: [{
