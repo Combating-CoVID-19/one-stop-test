@@ -84,11 +84,11 @@ function addData(){
 function createChart() {
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'pie',
+        type: 'bar',
         data: {
             labels: countries,
             datasets: [{
-                label: '# of Votes',
+                label: 'Confirmed Cases',
                 data: confirmedArray,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
