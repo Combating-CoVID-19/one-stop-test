@@ -41,9 +41,10 @@
 
 @media screen and (min-width: 1200px) {
   .img-top {
-    width:110%;
-    /* filter: blur(1px);
-    -webkit-filter: blur(1px); */
+    width:108%;
+    margin-left: -2px;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
   }
 
   .virus-img {
