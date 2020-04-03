@@ -189,7 +189,10 @@ border: 4px solid #494949 !important;
 display: inline-block;
 transition: all 0.4s ease 0s;
 }
+b {
 
+  mix-blend-mode: difference;
+}
 .example_c:hover {
 color: #ffffff !important;
 background: #f6b93b;
@@ -257,4 +260,7 @@ transition: all 0.4s ease 0s;
 }
 .txt-6 a {
   color:red;
+}
+a.mobile-navbar-l {
+  text-align-last: left;
 }

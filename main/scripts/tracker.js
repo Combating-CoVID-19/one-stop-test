@@ -1,6 +1,6 @@
 var db = firebase.database();
 
-var content = document.getElementById('content')
+var content = document.getElementById('tracker-content')
 var countries = []
 var retrievedData;
 var currentCountry;
@@ -31,19 +31,26 @@ function addData(){
 
         var currentElement = document.getElementById(countries[x])
         if(currentElement){
-            if(currentElement.innerHTML !== retrievedData[countries[x]].Confirmed){
-            console.log('dta updated')
+
+            if(currentElement.innerHTML != retrievedData[countries[x]].Confirmed){
+            console.log('data updated')
             var currentCountryElement = document.getElementById(countries[x])
             currentCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
             }
         } else {
+            var list = document.getElementById('tracker-list')
+            var newDiv = document.createElement('div');
             currentCountry = countries[x];
-            var newCountryElement = document.createElement('a');
+            if(currentCountry == "US"){
+                currentCountry = 'United States'
+            }
+            var newCountryElement = document.createElement('li');
             var newBreak = document.createElement('br')
-            $(newCountryElement).attr('id', countries[x]);
+            $(newCountryElement).attr('id', currentCountry);
+            $(newCountryElement).attr('key', currentCountry)
             newCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
-            content.appendChild(newCountryElement);
-            content.appendChild(newBreak)
+            // content.appendChild(list);
+            list.appendChild(newCountryElement)
         }
         x++
         addData()
