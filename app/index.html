@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+
+      <!-- REACT -->
+
+      <link rel="stylesheet" href="app.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800">
+      <!-- REACT -->
+
+
         <meta name="viewport" content="width=device-width">
         <!-- IMPORTS AND DEPENDENCIES -->
 
         <!-- Page Render Initialization (includes styling and authentication) (IMPORTANT Imports) -->
         <link rel="stylesheet" type="text/css" href="../main/styles/default.css">
         <link rel="stylesheet" type="text/css" href="../main/styles/auth.css">
+        <script src="../main/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="../main/styleScripts/jQDefaultStyles.js"></script>
         <!--ADD PAGE SPECIFIC CSS LINK  HERE-->
 
 
@@ -21,6 +32,17 @@
         <title>App | Pandemicalm</title>
     </head>
     <body>
+
+      <!-- REACT START -->
+
+      <script crossorigin src="https://unpkg.com/react@15/dist/react.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+      <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+      <script src="https://soulwire.github.io/sketch.js/js/sketch.min.js"></script>
+      <script src="app.js"></script>
+
+      <!-- REACT END -->
+
         <div class="header">
             <a class="expandable-l" onClick="dropDown()"><i class="fa fa-bars"></i>
 
@@ -45,12 +67,11 @@
             <a  class="dropdown-content" href="javascript:void(0)"> Purpose </a>
           </div>
 
-          <div id="content">
-
-            <div class="shopping">
-              </div>
-      </div>
-      <div class="space"></div>
+          <div id="container">
+            <div id="hook"></div>
+            <h1>  </h1>
+            <input type="file" id="files" name="files[]" multiple />
+          </div>
       <footer> <a href="https://icons8.com/">Icons by Icons8</a> </footer>
 
       <!--FINAL IMPORTS-->
