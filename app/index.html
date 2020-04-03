@@ -18,6 +18,7 @@
         <link rel="stylesheet" type="text/css" href="../main/styles/auth.css">
         <script src="../main/jQuery/jquery-3.4.1.min.js"></script>
         <script src="../main/styleScripts/jQDefaultStyles.js"></script>
+        <script src="../main/styleScripts/jQAppStyles.js"></script>
         <!--ADD PAGE SPECIFIC CSS LINK  HERE-->
 
 
@@ -66,11 +67,28 @@
             <a  class="dropdown-content" href="javascript:void(0)"> Purpose </a>
           </div>
 
-          <div id="container">
-            <div id="hook"></div>
-            <h1>  </h1>
-
+          <div class="expandable">
+            <button id="openNav" onclick="w3_open()">>></button>
           </div>
+
+          <div class="mySidebar" id="mySidebar">
+          </div>
+
+          <div id="main">
+
+
+          <div class="ttl-cont">
+            <h1 class="welcome"> <a id="a1"> STAY HOME </a> <br /> <a id="a2">STAY SAFE </a><br /><a id="a3"> SAVE LIVES</a></h1>
+            <a class="sbbtl-"> Help prevent the spread of Coronavirus </a> <br />
+            <a class="sbbtl-"> Click on the sidebar to view our full range of tips </a> <br />
+          </div>
+
+          <div class="td-box">
+            <a class="list-header"> TO DOS </a>
+            <a class="list-header"> DON'T DO </a>
+          </div>
+
+
       <footer> <a href="https://icons8.com/">Icons by Icons8</a> </footer>
 
       <!--FINAL IMPORTS-->
