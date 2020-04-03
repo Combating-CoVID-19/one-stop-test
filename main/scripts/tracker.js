@@ -43,6 +43,7 @@ function addData(){
             currentCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
             }
         } else {
+            console.log(currentCountry)
             var list = document.getElementById('tracker-list')
             var newDiv = document.createElement('div');
             var newCountryElement = document.createElement('li');
@@ -50,6 +51,7 @@ function addData(){
             $(newCountryElement).attr('id', currentCountry);
             $(newCountryElement).attr('key', currentCountry)
             newCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
+            // newCountryElement.innerHTML = retrievedData[currentCountry].Confirmed;
             // content.appendChild(list);
             list.appendChild(newCountryElement)
         }
