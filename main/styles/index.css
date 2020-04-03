@@ -246,7 +246,7 @@ transition: all 0.4s ease 0s;
 }
 
 .white {
-  color: var(--txt-col);
+  color: white;
 }
 .txt-1 a {
   color:red;
