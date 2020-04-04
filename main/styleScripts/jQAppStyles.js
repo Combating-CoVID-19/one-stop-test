@@ -14,16 +14,31 @@ window.onload = (event) => {
 }, 2500);
 }
 
+var isOpen = false;
+function w3_action() {
+    if(!isOpen) {
+    $("#main").animate({'margin-left': '25%'}, 500);
+    // $("#main").animate({'width': '75%'}, 500);
+    // $(".header").animate({'margin-left': '25%'}, 500);
 
-function w3_open() {
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("main").style.width = "75%";
-  document.getElementById("mySidebar").style.width = "25%";
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
-}
-function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
+        $("#openNav").addClass('txt-r-align');
+
+    $("#mySidebar").animate({width: '25%'}, 500);
+
+    $("#openNav").animate({'width': '25%'}, 500);
+    $('.logo').addClass('extend');
+    isOpen = true;
+  } else {
+    $("#main").animate({'margin-left': '5%'}, 500);
+    // $("#main").animate({'width': '95%'}, 500);
+    // $(".header").animate({'margin-left': '0%'}, 500);
+
+    $("#openNav").removeClass('txt-r-align');
+
+
+    $("#mySidebar").animate({width: '5%'}, 500);
+    $("#openNav").animate({'width': '5%'}, 500);
+    $('.logo').removeClass('extend');
+    isOpen = false;
+  }
 }

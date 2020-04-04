@@ -101,26 +101,63 @@ body {
 
 #openNav {
   position:fixed;
-  top:48px;
+  top:0;
   left:0;
-  width:75px;
+  width:5%;
   height:42px;
-    background-color: #4CAF50;
     padding:0 !important;
-    border: 1px solid black;
+    background-color: transparent;
+    border:none;
+    z-index:11;
+    flex-grow:1;
+    text-align:center;
 }
 
+.txt-r-align {
+  text-align:right !important;
+}
+
+.spin {
+  -webkit-animation:spin .5s linear;
+  animation-fill-mode: forwards;
+}
+.spin2 {
+  -webkit-animation:spin2 .5s linear;
+  animation-fill-mode: forwards;
+}
+
+* {
+  outline:none;
+}
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(180deg); } }
+@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(360deg); } }
+
+div button a.hmm {
+  color:var(--bg-color) !important;
+}
 #main {
   margin-top:48px;
 }
 
 .mySidebar {
+  animation-duration: 4s;
   background-color:var(--txt-bg-col);
   position:fixed;
   height:100%;
-  width:0%;
+  width:5%;
 }
 
 .header a {
   color: var(--txt-bg-col) !important;
+}
+
+.header a.logo {
+  margin-left:5%;
+
+}
+
+.header a.extend {
+  color: var(--bg-color) !important;
+  margin-left:0 !important;
 }
