@@ -32,9 +32,9 @@ function w3_action() {
     $("#main").animate({'margin-left': '5%'}, 500);
     // $("#main").animate({'width': '95%'}, 500);
     // $(".header").animate({'margin-left': '0%'}, 500);
-
+    setTimeout(function(){
     $("#openNav").removeClass('txt-r-align');
-
+  }, 400);
 
     $("#mySidebar").animate({width: '5%'}, 500);
     $("#openNav").animate({'width': '5%'}, 500);
