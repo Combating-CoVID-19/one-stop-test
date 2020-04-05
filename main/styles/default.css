@@ -224,3 +224,8 @@ a.mobile-navbar-l {
   color: var(--header-txt-col) !important;
   font-family: 'Titillium Web', sans-serif;
 text-decoration:none;}
+
+.bogo {
+  height:32px;
+  width:auto;
+}

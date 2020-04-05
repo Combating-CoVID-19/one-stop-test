@@ -79,6 +79,7 @@ body {
 }
 
 .list-header {
+  width:50%;
   color:white;
   text-color:white;
   flex-grow:1;
@@ -160,4 +161,9 @@ div button a.hmm {
 .header a.extend {
   color: var(--bg-color) !important;
   margin-left:0 !important;
+}
+
+.sbbtl-2 {
+  font-size:25px;
+  color: var(--txt-bg-col);
 }
