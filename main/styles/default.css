@@ -210,3 +210,17 @@ html, body {
 a.mobile-navbar-l {
   text-align-last: left;
 }
+
+.footer {
+  text-align:center;
+  text-decoration: none;
+  text-decoration-color: var(--header-txt-col);
+  position: relative;
+  z-index: 5;
+}
+
+.footer a {
+  font-size:20px;
+  color: var(--header-txt-col) !important;
+  font-family: 'Titillium Web', sans-serif;
+text-decoration:none;}
