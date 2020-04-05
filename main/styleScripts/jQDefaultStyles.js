@@ -17,6 +17,6 @@ $(function() {
 
 window.onload = function(){
   if($( window ).width() < 767) {
-    $(".bogo").attr("src", "/main/photos/Pandemicalm/g3667.png");
+    $(".bogo").attr("src", "main/photos/Pandemicalm/g3667.png");
   }
 }
