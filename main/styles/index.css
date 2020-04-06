@@ -94,9 +94,13 @@
   font-family: 'Titillium Web', sans-serif;
     color: var(--sbbtl-txt-col);
     font-size: 35px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(1px);
 }
 
+
+.header {
+  backdrop-filter: blur(8px);
+}
 
 .imp-btn {
     font-family: 'Titillium Web', sans-serif;
