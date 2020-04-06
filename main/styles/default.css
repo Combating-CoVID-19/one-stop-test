@@ -228,4 +228,7 @@ text-decoration:none;}
 .bogo {
   height:32px;
   width:auto;
+  padding-right: 6px;
+  padding-left: 6px;;
+  backdrop-filter: blur(12px);
 }

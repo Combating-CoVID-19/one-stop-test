@@ -41,8 +41,15 @@ function addData(){
             if(currentElement.innerHTML != retrievedData[countries[x]].Confirmed){
             console.log('data updated')
             var currentCountryElement = document.getElementById(countries[x])
-            currentCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
+            currentElement.innerHTML = retrievedData[countries[x]].Confirmed;
+            confirmedArray.push(retrievedData[countries[x]].Confirmed)
+    //         chart.data.labels.push(label);
+    // chart.data.datasets.forEach((dataset) => {
+    //     dataset.data.push();
+    // });
+
             }
+            createChart()
         } else {
             console.log(currentCountry)
             var list = document.getElementById('tracker-list')
@@ -81,9 +88,11 @@ function addData(){
         //     }
         // }
 }
+var myChart;
 function createChart() {
+    console.log("creating chart")
     var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: countries,
