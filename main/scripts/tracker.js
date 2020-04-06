@@ -5,51 +5,57 @@ var countries = []
 var confirmedArray = []
 var retrievedData;
 var currentCountry;
-var x=0;
+var x = 0;
 
 // firebase.database().ref('/CoVIDdata/').once('value').then(function(snapshot) {
 //     retrievedData = snapshot.val();
-  
+
 // });
 
 var covidData = firebase.database().ref('CoVIDdata/');
-covidData.on('value', function(snapshot) {
+covidData.on('value', function (snapshot) {
     countries = []
-//   addData(snapshot.val().countryArray.Countries);
-retrievedData = snapshot.val();
-  for(i=0; snapshot.val().countryArray.Countries.length>i; i++){
-      countries.push(snapshot.val().countryArray.Countries[i])
-  }
- x=0;
- console.log('data updated on remote')
-  addData()
+    //   addData(snapshot.val().countryArray.Countries);
+    retrievedData = snapshot.val();
+    for (i = 0; snapshot.val().countryArray.Countries.length > i; i++) {
+        countries.push(snapshot.val().countryArray.Countries[i])
+    }
+    x = 0;
+    console.log('data updated on remote')
+    addData()
 });
 
 
 
-function addData(){
+function addData() {
 
-        if(countries.length > x){
-            currentCountry = countries[x];
-            if(currentCountry == "US"){
-                currentCountry = 'United States'
+    if (countries.length > x) {
+        currentCountry = countries[x];
+        if (currentCountry == "US") {
+            currentCountry = 'United States'
+        }
+        var currentElement = document.getElementById(currentCountry)
+
+        if (currentElement) {
+
+            if (currentElement.innerHTML != retrievedData[countries[x]].Confirmed) {
+                console.log('data updated')
+                currentArrayPos = countries.indexOf(countries[x])
+
+                var currentCountryElement = document.getElementById(countries[x])
+                currentElement.innerHTML = retrievedData[countries[x]].Confirmed;
+                // confirmedArray.push(retrievedData[countries[x]].Confirmed)
+                //         chart.data.labels.push(label);
+                // chart.data.datasets.forEach((dataset) => {
+                //     dataset.data.push();
+                // });
+                confirmedArray.splice(currentArrayPos, 1)
+                confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
+                
+
             }
-            var currentElement = document.getElementById(currentCountry)
+            myChart.data.datasets[0].data[currentArrayPos] = confirmedArray[currentArrayPos];
 
-        if(currentElement){
-
-            if(currentElement.innerHTML != retrievedData[countries[x]].Confirmed){
-            console.log('data updated')
-            var currentCountryElement = document.getElementById(countries[x])
-            currentElement.innerHTML = retrievedData[countries[x]].Confirmed;
-            confirmedArray.push(retrievedData[countries[x]].Confirmed)
-    //         chart.data.labels.push(label);
-    // chart.data.datasets.forEach((dataset) => {
-    //     dataset.data.push();
-    // });
-
-            }
-            createChart()
         } else {
             console.log(currentCountry)
             var list = document.getElementById('tracker-list')
@@ -61,34 +67,41 @@ function addData(){
             newCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
             // newCountryElement.innerHTML = retrievedData[currentCountry].Confirmed;
             // content.appendChild(list);
+            currentArrayPos = countries.indexOf(countries[x])
             list.appendChild(newCountryElement)
+            // confirmedArray.splice(currentArrayPos, 1)
+            // confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
             confirmedArray.push(retrievedData[countries[x]].Confirmed)
-
 
         }
         x++
         addData()
-        } else {
-            createChart()
-        }
- 
-        // for (var key in retrievedData) {
-        //     if (retrievedData.hasOwnProperty(key)) {
-        //         console.log(key)
-        //        var currentElement = document.getElementById(key)
-        //        if(currentElement){
-        //         console.log(key)
-        //        } else {
-        //         var newCountryElement = document.createElement("p");
-        //         $(newCountryElement).attr('id', key);
-        //         newCountryElement.innerHTML = retrievedData[key].Confirmed;
-        //         content.appendChild(newCountryElement);
-        //         console.log(retrievedData[key])
-        //        }
-        //     }
-        // }
+    } else {
+        createChart()
+    }
+
+    // for (var key in retrievedData) {
+    //     if (retrievedData.hasOwnProperty(key)) {
+    //         console.log(key)
+    //        var currentElement = document.getElementById(key)
+    //        if(currentElement){
+    //         console.log(key)
+    //        } else {
+    //         var newCountryElement = document.createElement("p");
+    //         $(newCountryElement).attr('id', key);
+    //         newCountryElement.innerHTML = retrievedData[key].Confirmed;
+    //         content.appendChild(newCountryElement);
+    //         console.log(retrievedData[key])
+    //        }
+    //     }
+    // }
 }
+
+
+
+
 var myChart;
+
 function createChart() {
     console.log("creating chart")
     var ctx = document.getElementById('myChart').getContext('2d');
