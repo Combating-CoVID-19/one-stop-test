@@ -33,7 +33,6 @@ html, body {
 }
 
 .header {
-  backdrop-filter: blur(8px);
   z-index:40;
   margin:0;
   position:fixed;

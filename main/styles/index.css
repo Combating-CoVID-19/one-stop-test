@@ -98,6 +98,10 @@
 }
 
 
+.header {
+  backdrop-filter: blur(8px);
+}
+
 .imp-btn {
     font-family: 'Titillium Web', sans-serif;
   position: absolute;
