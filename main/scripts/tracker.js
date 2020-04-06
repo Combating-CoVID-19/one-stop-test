@@ -55,11 +55,11 @@ function addData() {
                 // chart.data.datasets.forEach((dataset) => {
                 //     dataset.data.push();
                 // });
-                confirmedArray.splice(currentArrayPos, 1)
-                confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
-                deathsArray.splice(currentArrayPos, 1)
-                deathsArray.splice(currentArrayPos, 0 , retrievedData[countries[x]].Deaths)
-                myChart.data.datasets[0].data[currentArrayPos] = confirmedArray[currentArrayPos];
+                // confirmedArray.splice(currentArrayPos, 1)
+                // confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
+                // deathsArray.splice(currentArrayPos, 1)
+                // deathsArray.splice(currentArrayPos, 0 , retrievedData[countries[x]].Deaths)
+                // myChart.data.datasets[0].data[currentArrayPos] = confirmedArray[currentArrayPos];
 
             }
 
@@ -97,7 +97,7 @@ function addData() {
         for(i=0; i<confirmedArray.length; i++){
             dummyConfirmedArray.push(confirmedArray[i]);
         }
-        
+        chartLabelsList = []
         chartConfirmedArray = []
         dummyConfirmedArray.sort(function(a, b){return b - a})
         // dummyConfirmedArray[0].reverse()
@@ -122,8 +122,13 @@ function addData() {
                 chartLabelsList.push(countries[indexedPosition])
             }
         }
+        if(myChart){
+            // myChart.data.datasets[0].data = chartConfirmedArray;
+ 
+        } else {
         createChart()
     }
+}
 
     // for (var key in retrievedData) {
     //     if (retrievedData.hasOwnProperty(key)) {
