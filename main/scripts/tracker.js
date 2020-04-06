@@ -6,6 +6,8 @@ var confirmedArray = []
 var retrievedData;
 var currentCountry;
 var x = 0;
+var chartColorArray = []
+var chartColorOuterArray = []
 
 // firebase.database().ref('/CoVIDdata/').once('value').then(function(snapshot) {
 //     retrievedData = snapshot.val();
@@ -72,7 +74,15 @@ function addData() {
             // confirmedArray.splice(currentArrayPos, 1)
             // confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
             confirmedArray.push(retrievedData[countries[x]].Confirmed)
-
+            var letters = '0123456789ABCDEF';
+            var colorMiddle = '#50';
+            var colorOuter = '#'
+            for (var i = 0; i < 6; i++) {
+              colorMiddle += letters[Math.floor(Math.random() * 16)];
+              colorOuter += letters[Math.floor(Math.random() * 16)];
+            }
+            chartColorArray.push(colorMiddle)
+            chartColorOuterArray.push(colorOuter)
         }
         x++
         addData()
@@ -103,6 +113,7 @@ function addData() {
 var myChart;
 
 function createChart() {
+    Chart.defaults.global.defaultColor = 'rgba(255, 0, 255, 0.8)';
     console.log("creating chart")
     var ctx = document.getElementById('myChart').getContext('2d');
     myChart = new Chart(ctx, {
@@ -112,22 +123,22 @@ function createChart() {
             datasets: [{
                 label: 'Confirmed Cases',
                 data: confirmedArray,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
+                backgroundColor: chartColorArray
+                    // 'rgba(255, 99, 132, 0.2)',
+                    // 'rgba(54, 162, 235, 0.2)',
+                    // 'rgba(255, 206, 86, 0.2)',
+                    // 'rgba(75, 192, 192, 0.2)',
+                    // 'rgba(153, 102, 255, 0.2)',
+                    // 'rgba(255, 159, 64, 0.2)'
+                ,
+                borderColor: chartColorOuterArray
+                    // 'rgba(255, 99, 132, 1)',
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
+                    // 'rgba(153, 102, 255, 1)',
+                    // 'rgba(255, 159, 64, 1)'
+                ,
                 borderWidth: 1
             }]
         },
