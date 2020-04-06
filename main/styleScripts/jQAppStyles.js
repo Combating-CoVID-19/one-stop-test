@@ -20,7 +20,7 @@ function w3_action() {
     if(!isOpen) {
     // $("#main").animate({'width': '75%'}, 250);
     var ml = $(window).width()/4 - $('.bogo').width()/2 - 20;
-        $(".logo").animate({'margin-right': '50%'}, 250);
+        $(".toggle-theme-asset").animate({'margin-left': '100%'}, 250);
         $(".logo").animate({'margin-left': ml}, 250);
     $(".header").animate({'margin-left': '25%'}, 250);
 
@@ -31,7 +31,7 @@ function w3_action() {
     $("#openNav").animate({'width': '25%'}, 250);
     isOpen = true;
   } else {
-      $(".logo").animate({'margin-right': '0%'}, 250);
+      $(".toggle-theme-asset").animate({'margin-left': ''}, 250);
     // $("#main").animate({'width': '95%'}, 250);
     $(".logo").animate({'padding-left': '12px'}, 250);
     $(".logo").animate({'margin-left': '0px'}, 250);
