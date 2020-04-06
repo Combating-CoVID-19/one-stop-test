@@ -33,6 +33,7 @@ html, body {
 }
 
 .header {
+  backdrop-filter: blur(8px);
   z-index:40;
   margin:0;
   position:fixed;
@@ -230,5 +231,5 @@ text-decoration:none;}
   width:auto;
   padding-right: 6px;
   padding-left: 6px;;
-  backdrop-filter: blur(12px);
+
 }

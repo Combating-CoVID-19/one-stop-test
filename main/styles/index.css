@@ -94,7 +94,7 @@
   font-family: 'Titillium Web', sans-serif;
     color: var(--sbbtl-txt-col);
     font-size: 35px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
 }
 
 
