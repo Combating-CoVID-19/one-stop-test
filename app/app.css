@@ -101,6 +101,7 @@ body {
 }
 
 #openNav {
+  background-color:red !important;
   position:fixed;
   top:0;
   left:0;
@@ -114,6 +115,14 @@ body {
     text-align:center;
 }
 
+@media screen and (max-width: 767px) {
+  #openNav {
+    display:none;
+  }
+  .mySidebar {
+    display:none;
+  }
+}
 .txt-r-align {
   text-align:right !important;
 }
@@ -142,6 +151,7 @@ div button a.hmm {
 }
 
 .mySidebar {
+  margin-top:-25px;
   animation-duration: 4s;
   background-color:var(--txt-bg-col);
   position:fixed;
