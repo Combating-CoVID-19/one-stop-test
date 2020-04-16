@@ -53,6 +53,7 @@ body {
 .welcome {
   color:white;
   margin-bottom:5px !important;
+  padding-top:20px;
 }
 
 .welcome #a3 {
@@ -169,9 +170,29 @@ div button a.hmm {
   color: var(--txt-bg-col) !important;
 }
 
-.header a.logo {
-  margin-left:5%;
+.btn {
+  border: 0.5px solid green;
+  cursor: pointer;
+}
 
+.dropdown-menu {
+  position: absolute;
+  width:100%;
+  top:44px;
+  display:none;
+
+  flex-grow: 0 !important;
+}
+
+.dropdown-item {
+  color:var(--txt-bg-col);
+  text-decoration:none;
+  margin-right:5px;
+  margin-right:5px;
+}
+
+.dropdown-item {
+  width:100%;
 }
 
 .header a.extend {
