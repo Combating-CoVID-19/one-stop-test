@@ -50,15 +50,19 @@ function addData() {
 
                 var currentCountryElement = document.getElementById(countries[x])
                 currentElement.innerHTML = retrievedData[countries[x]].Confirmed;
+                
+                currentArrayPos = countries.indexOf(countries[x])
+                
+                
                 // confirmedArray.push(retrievedData[countries[x]].Confirmed)
                 //         chart.data.labels.push(label);
                 // chart.data.datasets.forEach((dataset) => {
                 //     dataset.data.push();
                 // });
-                // confirmedArray.splice(currentArrayPos, 1)
-                // confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
-                // deathsArray.splice(currentArrayPos, 1)
-                // deathsArray.splice(currentArrayPos, 0 , retrievedData[countries[x]].Deaths)
+                confirmedArray.splice(currentArrayPos, 1)
+                confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
+                deathsArray.splice(currentArrayPos, 1)
+                deathsArray.splice(currentArrayPos, 0 , retrievedData[countries[x]].Deaths)
                 // myChart.data.datasets[0].data[currentArrayPos] = confirmedArray[currentArrayPos];
 
             }
@@ -93,7 +97,11 @@ function addData() {
         x++
         addData()
     } else {
-        dummyConfirmedArray = []
+        updateChart()
+}
+
+function updateChart(){
+    dummyConfirmedArray = []
         for(i=0; i<confirmedArray.length; i++){
             dummyConfirmedArray.push(confirmedArray[i]);
         }
@@ -123,8 +131,15 @@ function addData() {
             }
         }
         if(myChart){
-            // myChart.data.datasets[0].data = chartConfirmedArray;
- 
+        //    myChart.data.datasets[0].data = chartConfirmedArray;
+        //     myChart.update()
+        
+        for(x=0; chartConfirmedArray.length >x; x++){
+            myChart.data.datasets[0].data = chartConfirmedArray;
+            myChart.data.labels = chartLabelsList
+            myChart.update()
+        }
+            console.log('epic')
         } else {
         createChart()
     }
