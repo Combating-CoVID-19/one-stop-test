@@ -163,8 +163,6 @@ function updateChart(){
 }
 
 
-
-
 var myChart;
 
 function createChart() {
