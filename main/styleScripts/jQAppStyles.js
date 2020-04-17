@@ -1,4 +1,12 @@
 window.onload = (event) => {
+
+  var width = $(window).width();
+
+  if(width < 767) {
+    console.log("ok boomer");
+    $('#dropdownMenuButton2').html("CAT");
+  }
+
       $("#a1").animate({opacity: 1}, 250);
       setTimeout(function(){
       $("#a2").animate({opacity: 1}, 250);

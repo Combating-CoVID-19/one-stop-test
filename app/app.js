@@ -17,13 +17,3 @@ function showMenu() {
     isOpen = true;
   }
 }
-
-window.onload = function() {
-
-var width = $(window).width();
-
-if(width < 767) {
-  console.log("ok boomer");
-  $('#dropdownMenuButton2').html("CAT");
-}
-}

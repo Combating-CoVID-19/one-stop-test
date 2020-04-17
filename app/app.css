@@ -180,7 +180,9 @@ div button a.hmm {
   width:100%;
   top:44px;
   display:none;
-
+  height: 35px;
+  overflow-x:scroll;
+  overflow-y: hidden;
   flex-grow: 0 !important;
 }
 
@@ -193,6 +195,7 @@ div button a.hmm {
 
 .dropdown-item {
   width:100%;
+
 }
 
 .header a.extend {
