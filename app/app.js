@@ -10,10 +10,13 @@ function showMenu() {
   var widtha = $('#dropdownMenuButton').width();
 
   if(isOpen) {
-    $('.dropdown-menu').hide();
+    curWidth =  $('.block-o').width();
+    $('.block-o').width(curWidth).animate({width:'100%'}, 750);
+    // $('.dropdown-menu').hide();
     isOpen = false;
   } else {
-    $('.dropdown-menu').show();
+    curWidth =  $('.block-o').width();
+    $('.block-o').width(curWidth).animate({width: '24px'}, 750);
     isOpen = true;
   }
 }

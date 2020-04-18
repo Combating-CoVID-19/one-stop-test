@@ -36,17 +36,32 @@ body {
   width:24px;
   left:20px;
   z-index: 4;
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+#dropdownMenuButton2:hover {
+  /* border-radius: 14px;
+  width: 28px;
+  height:28px;
+  font-size: 18px; */
+  background-color:  green;
+  color:white;
 }
 
 .block-o {
   z-index:5;
   position: absolute;
   top:48px;
-  width: 64px;
+  width:100%;
+  /* width: 64px; */
   display: block;
   height:35px;
   background-color: black;
 }
+
+
 
 #container {
   position: relative;
@@ -174,7 +189,7 @@ div button a.hmm {
   color:var(--bg-color) !important;
 }
 #main {
-  margin-top:48px;
+  margin-top:83px;
 }
 
 .mySidebar {
@@ -202,7 +217,6 @@ div button a.hmm {
   position: absolute;
   width:100%;
   top:44px;
-  display:none;
   height: 35px;
     margin-bottom:5px;
   flex-grow: 0 !important;
