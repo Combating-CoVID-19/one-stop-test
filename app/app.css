@@ -211,7 +211,7 @@ div button a.hmm {
 }
 
 .dropdown-menu {
-  background-color: var(--dropdown-bg-col);
+  background-color: var(--bg-color);
   overflow: auto;
   white-space: nowrap;
   position: absolute;
@@ -225,7 +225,7 @@ div button a.hmm {
   font-family: 'Titillium Web', sans-serif;
   margin-top:6px;
   margin-bottom:auto;
-  color:white;
+  color:var(--txt-bg-col);
   text-decoration:none;
   margin-left:5px;
   margin-right:5px;
