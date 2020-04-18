@@ -29,6 +29,25 @@ body {
   text-align: center;
 }
 
+#dropdownMenuButton2 {
+  position:absolute;
+  color: var(--txt-bg-col);
+  border-radius: 12px;
+  width:24px;
+  left:20px;
+  z-index: 4;
+}
+
+.block-o {
+  z-index:5;
+  position: absolute;
+  top:48px;
+  width: 64px;
+  display: block;
+  height:35px;
+  background-color: black;
+}
+
 #container {
   position: relative;
   z-index: 2;
