@@ -51,14 +51,14 @@ body {
 }
 
 .block-o {
+  background-color: var(--bg-color);
   z-index:5;
   position: absolute;
   top:48px;
   width:100%;
   /* width: 64px; */
   display: block;
-  height:35px;
-  background-color: black;
+  height:30px;
 }
 
 
@@ -216,9 +216,8 @@ div button a.hmm {
   white-space: nowrap;
   position: absolute;
   width:100%;
-  top:44px;
-  height: 35px;
-    margin-bottom:5px;
+  top:48px;
+  height: 30px;
   flex-grow: 0 !important;
 }
 

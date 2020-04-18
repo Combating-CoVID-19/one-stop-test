@@ -16,7 +16,7 @@ function showMenu() {
     isOpen = false;
   } else {
     curWidth =  $('.block-o').width();
-    $('.block-o').width(curWidth).animate({width: '24px'}, 750);
+    $('.block-o').width(curWidth).animate({width: '64px'}, 750);
     isOpen = true;
   }
 }
