@@ -312,3 +312,13 @@ div button a.hmm {
   font-size:25px;
   color: var(--txt-bg-col);
 }
+
+.para {
+  font-size: 15px;
+  padding-left:0px;
+  width:90%;
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  color:var(--txt-bg-col);
+}
