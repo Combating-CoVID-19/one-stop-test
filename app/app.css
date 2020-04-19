@@ -132,7 +132,7 @@ body {
 
 .list-header {
   width:50%;
-  color:white;
+    color:var(--txt-bg-col);
   text-color:white;
   flex-grow:1;
   opacity:0;
