@@ -103,7 +103,7 @@ body {
 }
 
 .welcome {
-  color:white;
+  color:var(--txt-bg-col);
   margin-bottom:5px !important;
 }
 
@@ -159,15 +159,20 @@ body {
   flex-grow:1;
 }
 
+.tips-1 {
+  margin-top: 20px;
+}
 
 #FDA {
   width:100%;
   height:20px;
+  color:var(--txt-bg-col);
 }
 
 #FDAI {
     float:right;
     margin-right: 30%;
+    text-decoration: none;
 }
 li {
   text-align:left;
