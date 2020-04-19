@@ -64,10 +64,10 @@ body {
 
 @media screen and (max-width: 767px) {
   .block-o {
-    top:48px;
+    top:48px !important;
   }
   .dropdown-menu {
-    top:48px;
+    top:48px !important;
   }
 }
 
