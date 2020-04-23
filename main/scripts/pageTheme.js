@@ -10,13 +10,7 @@ function checkTheme() {
         autoThemeBtn.innerHTML = "Use System Theme Off";
     if(currentTheme == null && currentTheme !== "dark" && currentTheme !== "light"){
         currentTheme = localStorage.getItem('page-theme');
-        if(mediaQueryList.matches){
-            localStorage.setItem('page-theme', "dark")
-            checkTheme();
-        } else {
-            localStorage.setItem('page-theme', "light");
-            checkTheme();
-        }
+        localStorage.setItem('page-theme', 'dark')
     } else {
         if(currentTheme == "dark"){
             document.documentElement.setAttribute('page-theme', 'dark')
