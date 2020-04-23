@@ -75,6 +75,7 @@ function addData() {
             var newBreak = document.createElement('br')
             $(newCountryElement).attr('id', currentCountry);
             $(newCountryElement).attr('key', currentCountry)
+            $(newCountryElement).addClass('data')
             newCountryElement.innerHTML = retrievedData[countries[x]].Confirmed;
             // newCountryElement.innerHTML = retrievedData[currentCountry].Confirmed;
             // content.appendChild(list);

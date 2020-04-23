@@ -130,6 +130,7 @@
           </div>
 
           <div class="tips-1">
+            <a class="sbbtl-2" href="tracker.html">Use Our LIVE CovID-19 Tracker</a><br>
             <a class="sbbtl-2">Your one stop solution to quarentine. <br /> Everything from hair to health. <br />Click the C to get started. </a> <br />
           </div>
 
@@ -167,6 +168,16 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         </script>
+<script>
+var url = 'http://newsapi.org/v2/everything?q=coronavirus&' +
+  '' +
+  'apiKey=c82e65fa2c7b4873827205508123e2db';
+var req = new Request(url);
+fetch(req)
+.then(function(response) {
+console.log(response.json());
+})
 
+</script>
     </body>
 </html>

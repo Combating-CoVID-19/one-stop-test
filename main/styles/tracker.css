@@ -1,11 +1,13 @@
 :root {
     --bg-color: rgb(0, 72, 114);
+    --tracker-text-color: rgb(255, 255, 255);
 }
 [page-theme="dark"]{
     --bg-color: rgb(32, 32, 32);
+    --tracker-text-color: rgb(206, 206, 206);
 }
 .tracker-content {
-    margin-top: 15%;
+    /* margin-top: 15%; */
 }
 
 
@@ -30,3 +32,14 @@ li:hover {
     100%{size: 125%;}
 }
 
+.tracker-content{
+    color: var(--tracker-text-color)
+}
+.countryData {
+    /* background-color: white; */
+    border-color: aqua;
+
+}
+#myChart {
+    margin-top: 75px;
+}
