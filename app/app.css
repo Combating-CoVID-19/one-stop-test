@@ -289,11 +289,24 @@ div button a.hmm {
 }
 
 .covid-tracker-module{
-
-  background: url(https://www.gettingsmart.com/wp-content/uploads/2017/06/Program-Code-Feature-Image.jpg);
-  color: white;
+  color:white;
+  height:100px;
   /* height: 15%; */
   /* filter: grayscale(50%) blur(6px); */
+}
+
+
+.covid-tracker-module a {
+  color:white;
+
+}
+
+.covid-tracker-module img {
+  /* width:100%; */
+  margin-right:auto;
+  margin-left:auto;
+  height:64px;
+  flex-grow: 0;
 }
 
 .shopping-module {
