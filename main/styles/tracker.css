@@ -42,3 +42,7 @@ li:hover {
 #myChart {
     margin-top: 75px;
 }
+
+li {
+    display: none;
+}
