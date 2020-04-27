@@ -75,7 +75,7 @@ body {
   color:var(--bg-color);
    width:64px;
   height:100%;
-  margin=right:0px;
+  margin-right:0px;
 }
 
 
@@ -276,4 +276,30 @@ div button a.hmm {
 .sbbtl-2 {
   font-size:25px;
   color: var(--txt-bg-col);
+}
+
+.flex-container-modules {
+  display: flex;
+  text-align: center;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.covid-tracker-module{
+
+  background: url(https://www.gettingsmart.com/wp-content/uploads/2017/06/Program-Code-Feature-Image.jpg);
+  color: white;
+  /* height: 15%; */
+  /* filter: grayscale(50%) blur(6px); */
+}
+
+.shopping-module {
+
+}
+
+.flex-module{
+  flex-grow: 1;
 }
