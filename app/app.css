@@ -316,3 +316,7 @@ div button a.hmm {
 .flex-module{
   flex-grow: 1;
 }
+
+a {
+  text-decoration: none;
+}
