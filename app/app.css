@@ -10,6 +10,7 @@
   --dropdown-txt-col:white;
   --header-txt-col-hover: rgb(175, 175, 175);
   --txt-bg-col: black;
+  --txt-desc-color: rgb(139, 139, 139);
 
 }
 
@@ -384,7 +385,7 @@ h5 {
 }
 
 h6 {
-  color: var(--txt-bg-col)
+  color: var(--txt-desc-color)
 }
 
 #show-more {
