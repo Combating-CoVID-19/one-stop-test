@@ -57,9 +57,12 @@ function build(keykey) {
     flexdiv1.classList.add("flexdiv");
     ncd.appendChild(flexdiv1);
 
+    var contDiv1 = document.createElement("div");
+    contDiv1.id = "contDiv";
     var btn = document.createElement("a");
     btn.innerHTML = "Continue reading..";
     btn.id = "contBTN";
     btn.href = urls[keykey];
-    ncd.appendChild(btn);
+    contDiv1.appendChild(btn);
+    ncd.appendChild(contDiv1);
 }
