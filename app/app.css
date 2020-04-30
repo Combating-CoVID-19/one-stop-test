@@ -64,7 +64,6 @@ body {
   /* width: 64px; */
   display: block;
   height:30px;
-  transition: all 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -404,8 +403,12 @@ h6 {
 }
 
 #contBTN {
-  width:100%;
-  float:right;
-  margin-right:10px;
-  /* margin-bottom:25px; */
+  margin-top:10px;
+  color: var(--txt-desc-color);
+  margin-right:1vw;
+}
+
+#contDiv {
+  text-align: right;
+  margin-top:5px;
 }
