@@ -24,13 +24,10 @@ newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( functio
     for (var key in retrievedData) {
       if (retrievedData.hasOwnProperty(key)) {
         headlines.push(retrievedData[key].Title);
-        authors.push(retrievedData[key].Author);
-        contentArr.push(retrievedData[key].Content);
         descriptions.push(retrievedData[key].Description);
         dates.push(retrievedData[key].PublishDate);
         sourceNames.push(retrievedData[key].SourceName);
         urls.push(retrievedData[key].URL);
-        urlforimages.push(retrievedData[key].URLToImage);
         build(x);
         x++;
       }
@@ -59,4 +56,10 @@ function build(keykey) {
     flexdiv1.appendChild(date);
     flexdiv1.classList.add("flexdiv");
     ncd.appendChild(flexdiv1);
+
+    var btn = document.createElement("a");
+    btn.innerHTML = "Continue reading..";
+    btn.id = "contBTN";
+    btn.href = urls[keykey];
+    ncd.appendChild(btn);
 }
