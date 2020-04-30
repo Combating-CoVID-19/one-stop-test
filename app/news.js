@@ -5,7 +5,7 @@ var db = firebase.database();
 var headlines = [];
 var currentHeadline;
 var newsData = firebase.database().ref('News/');
-
+console.log(newsData);
 newsData.on('value', function (snapshot) {
     headlines = [];
     console.log(snapshot.val());
@@ -14,5 +14,5 @@ newsData.on('value', function (snapshot) {
         currentHeadline = retrievedData[i];
         headlines.push(currentHeadline.Title);
     }
-    
+
 });
