@@ -134,7 +134,7 @@ body {
 .list-header {
   width:50%;
   color:var(--txt-bg-col);
-  text-color:white;
+  color:white;
   flex-grow:1;
   opacity:0;
 }
@@ -290,7 +290,7 @@ div button a.hmm {
 }
 
 .covid-tracker-module{
-  color:white;
+  color: var(--txt-bg-col);
   height:100px;
   /* height: 15%; */
   /* filter: grayscale(50%) blur(6px); */
@@ -299,7 +299,8 @@ div button a.hmm {
 
 
 .covid-tracker-module a {
-  color:white;
+  color: var(--txt-bg-col);
+  transition: all 0.2s ease-in-out;
 
 }
 
@@ -332,12 +333,17 @@ a {
   border-color: var(--border-news-clr);
 
 }
+.news-title {
+  color: var(--txt-bg-col);
+  transition: all 0.2s ease-in-out;
+}
 
 @media screen and (max-width: 767px) {
   .news-flex-module {
     flex-basis: 100%;
     border-left: none;
     border-top: thin solid;
+    border-color: var(--border-news-clr);
   }
 
 }
