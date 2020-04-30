@@ -369,6 +369,16 @@ a {
   /* color:red; */
 }
 
+.news-link {
+
+  color: var(--txt-bg-col);
+}
+
+.news-link:hover {
+
+  color: var(--header-txt-col-hover);
+}
+
 .flexdiv {
   display:flex;
 }

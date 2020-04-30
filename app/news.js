@@ -39,9 +39,13 @@ newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( functio
 function build(keykey) {
     var ncd = document.getElementById("nCD");
     var title = document.createElement("h3");
-    title.innerHTML = headlines[keykey];
+    var titleInner = document.createElement('a')
+    titleInner.innerHTML = headlines[keykey];
     title.classList.add("title");
     ncd.appendChild(title);
+    title.appendChild(titleInner)
+    titleInner.classList.add('news-link')
+    $(titleInner).attr('href', urls[keykey] )
 
     var description = document.createElement("h6");
     description.innerHTML = descriptions[keykey];
