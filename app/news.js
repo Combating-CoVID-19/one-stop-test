@@ -18,7 +18,7 @@ var newsData = firebase.database().ref('News/');
 
 newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( function (snapshot) {
     headlines = [];
-    console.log(snapshot.val());
+    // console.log(snapshot.val());
     retrievedData = snapshot.val();
     var x = 0;
     for (var key in retrievedData) {

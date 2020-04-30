@@ -37,3 +37,5 @@ function changeNews(){
   $("#dark-mode-news").css('display', 'none')
 }
 }
+
+changeNews()
