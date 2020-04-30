@@ -41,7 +41,7 @@ newsData.on('value', function (snapshot) {
 
 function build(keykey) {
     var ncd = document.getElementById("nCD");
-    var title = document.createElement("h2");
+    var title = document.createElement("h3");
     title.innerHTML = headlines[keykey];
     title.classList.add("title");
     ncd.appendChild(title);
