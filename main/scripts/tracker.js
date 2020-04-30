@@ -12,6 +12,7 @@ var deathsArray = [];
 var dummyConfirmedArray = []
 var chartConfirmedArray = []
 var chartLabelsList = []
+var chartDeathsArray = []
 
 // firebase.database().ref('/CoVIDdata/').once('value').then(function(snapshot) {
 //     retrievedData = snapshot.val();
@@ -102,13 +103,18 @@ function addData() {
 }
 
 function updateChart(){
+    dummyDeathsArray = []
+    console.log(dummyDeathsArray)
     dummyConfirmedArray = []
         for(i=0; i<confirmedArray.length; i++){
             dummyConfirmedArray.push(confirmedArray[i]);
+            dummyDeathsArray.push(deathsArray[i])
         }
         chartLabelsList = []
         chartConfirmedArray = []
+        chartDeathsArray = []
         dummyConfirmedArray.sort(function(a, b){return b - a})
+        
         // dummyConfirmedArray[0].reverse()
         // // for(i = 0; 9>i; i++){
         //     var i=0
@@ -128,6 +134,7 @@ function updateChart(){
             console.log(currentDummyItem)
             if(currentDummyItem != "NA"){
                 chartConfirmedArray.push(currentDummyItem)
+                chartDeathsArray.push(deathsArray[indexedPosition])
                 chartLabelsList.push(countries[indexedPosition])
             }
         }
@@ -137,6 +144,7 @@ function updateChart(){
         
         for(x=0; chartConfirmedArray.length >x; x++){
             myChart.data.datasets[0].data = chartConfirmedArray;
+            myChart.data.datasets[1].data = chartDeathsArray;
             myChart.data.labels = chartLabelsList
             myChart.update()
         }
@@ -200,7 +208,37 @@ function createChart() {
                     // 'rgba(255, 159, 64, 1)'
                 ,
                 borderWidth: 1
-            }]
+            },
+            {
+                label: 'Deaths',
+                data: chartDeathsArray,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: chartColorOuterArray
+                    // 'rgba(255, 99, 132, 1)',
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
+                    // 'rgba(153, 102, 255, 1)',
+                    // 'rgba(255, 159, 64, 1)'
+                ,
+                borderWidth: 1
+            }
+        
+        
+        ]
         },
         options: {
             scales: {
