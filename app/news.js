@@ -14,7 +14,7 @@ var urlforimages = [];
 
 var currentHeadline;
 var newsData = firebase.database().ref('News/');
-console.log(newsData);
+// console.log(newsData);
 
 newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( function (snapshot) {
     headlines = [];
