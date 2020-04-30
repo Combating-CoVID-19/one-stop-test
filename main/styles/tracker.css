@@ -1,6 +1,6 @@
 :root {
-    --bg-color: rgb(0, 72, 114);
-    --tracker-text-color: rgb(255, 255, 255);
+    --bg-color: rgb(32, 32, 32);
+    --tracker-text-color: rgb(206, 206, 206);
 }
 [page-theme="dark"]{
     --bg-color: rgb(32, 32, 32);
