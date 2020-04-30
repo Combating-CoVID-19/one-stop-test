@@ -375,7 +375,6 @@ a {
 h5 {
   flex-grow:1;
   text-align:left;
-  color:gray;
   font-family: 'Manrope', sans-serif;
   margin-bottom:0px;
   margin-top:0px;
@@ -395,8 +394,9 @@ h6 {
   margin-right:20px;
 }
 
-h6 {  
+h6 {
   margin-left: 10px;
   text-align: left;
   font-family: 'Roboto', sans-serif;
+  font-weight:100;
 }
