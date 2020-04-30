@@ -13,6 +13,8 @@ var dummyConfirmedArray = []
 var chartConfirmedArray = []
 var chartLabelsList = []
 var chartDeathsArray = []
+var chartRecoveredArray = []
+var recoveredArray = []
 
 // firebase.database().ref('/CoVIDdata/').once('value').then(function(snapshot) {
 //     retrievedData = snapshot.val();
@@ -64,6 +66,8 @@ function addData() {
                 confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
                 deathsArray.splice(currentArrayPos, 1)
                 deathsArray.splice(currentArrayPos, 0 , retrievedData[countries[x]].Deaths)
+                recoveredArray.splice(currentArrayPos, 1)
+                recoveredArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Recovered )
                 // myChart.data.datasets[0].data[currentArrayPos] = confirmedArray[currentArrayPos];
 
             }
@@ -86,6 +90,7 @@ function addData() {
             // confirmedArray.splice(currentArrayPos, 0, retrievedData[countries[x]].Confirmed)
             confirmedArray.push(retrievedData[countries[x]].Confirmed)
             deathsArray.push(retrievedData[countries[x]].Deaths)
+            recoveredArray.push(retrievedData[countries[x]].Recovered)
             var letters = '0123456789ABCDEF';
             var colorMiddle = '#50';
             var colorOuter = '#255'
@@ -104,15 +109,18 @@ function addData() {
 
 function updateChart(){
     dummyDeathsArray = []
+    dummyRecoveredArray = []
     console.log(dummyDeathsArray)
     dummyConfirmedArray = []
         for(i=0; i<confirmedArray.length; i++){
             dummyConfirmedArray.push(confirmedArray[i]);
             dummyDeathsArray.push(deathsArray[i])
+            dummyRecoveredArray.push(recoveredArray[i])
         }
         chartLabelsList = []
         chartConfirmedArray = []
         chartDeathsArray = []
+        chartRecoveredArray = []
         dummyConfirmedArray.sort(function(a, b){return b - a})
         
         // dummyConfirmedArray[0].reverse()
@@ -135,6 +143,7 @@ function updateChart(){
             if(currentDummyItem != "NA"){
                 chartConfirmedArray.push(currentDummyItem)
                 chartDeathsArray.push(deathsArray[indexedPosition])
+                chartRecoveredArray.push(recoveredArray[indexedPosition])
                 chartLabelsList.push(countries[indexedPosition])
             }
         }
@@ -186,18 +195,18 @@ function createChart() {
                 label: 'Confirmed Cases',
                 data: chartConfirmedArray,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
                 ],
                 borderColor: chartColorOuterArray
                     // 'rgba(255, 99, 132, 1)',
@@ -210,21 +219,49 @@ function createChart() {
                 borderWidth: 1
             },
             {
+                label: 'Recovered',
+                data: chartRecoveredArray,
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: chartColorOuterArray
+                    // 'rgba(255, 99, 132, 1)',
+                    // 'rgba(54, 162, 235, 1)',
+                    // 'rgba(255, 206, 86, 1)',
+                    // 'rgba(75, 192, 192, 1)',
+                    // 'rgba(153, 102, 255, 1)',
+                    // 'rgba(255, 159, 64, 1)'
+                ,
+                borderWidth: 1
+            }
+            ,
+            {
                 label: 'Deaths',
                 data: chartDeathsArray,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
                     'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
                 ],
                 borderColor: chartColorOuterArray
                     // 'rgba(255, 99, 132, 1)',
@@ -251,3 +288,4 @@ function createChart() {
         }
     });
 }
+
