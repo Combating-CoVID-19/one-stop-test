@@ -363,6 +363,7 @@ a {
   text-align:left;
   margin-left:10px;
   font-family: 'Roboto', sans-serif;
+  color: var(--txt-bg-col)
   /* color:red; */
 }
 
@@ -379,6 +380,10 @@ h5 {
   margin-left:10px;
   width:50%;
   color:red;
+}
+
+h6 {
+  color: var(--txt-bg-col)
 }
 
 #show-more {
