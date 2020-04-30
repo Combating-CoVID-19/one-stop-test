@@ -22,3 +22,18 @@ function showMenu() {
     isOpen = true;
   }
 }
+
+function changeNewsBuffer(){
+  changeTheme()
+  changeNews()
+}
+
+function changeNews(){
+  if(currentTheme == "dark"){
+    $("#light-mode-news").css('display', 'none')
+    $("#dark-mode-news").css('display', 'inline')
+} else {
+  $("#light-mode-news").css('display', 'inline')
+  $("#dark-mode-news").css('display', 'none')
+}
+}
