@@ -136,8 +136,7 @@
                 <a> Hospitals </a>
             </div>
             <div class="news-flex-module" id="news-flex-module">
-              <img src="https://img.icons8.com/clouds/100/000000/news.png"/>
-            </div>
+              <img src="https://img.icons8.com/windows/32/000000/news-spotlight.png"/>            </div>
           </div>
 
 
@@ -174,16 +173,12 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         </script>
-<script>
-var url = 'http://newsapi.org/v2/everything?q=coronavirus&' +
-  '' +
-  'apiKey=c82e65fa2c7b4873827205508123e2db';
-var req = new Request(url);
-fetch(req)
-.then(function(response) {
-console.log(response.json());
-})
 
-</script>
+
+        <script>
+          var x = document.documentElement.getAttribute('page-theme')
+          console.log(x)
+        </script>
+
     </body>
 </html>
