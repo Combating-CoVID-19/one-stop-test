@@ -327,4 +327,14 @@ a {
   flex-grow: 2;
   height: 80vh;
   flex-basis: 40%;
+  border-left: thin solid;
+  border-color: black;
+
+}
+
+@media screen and (max-width: 767px) {
+  .news-flex-module {
+    flex-basis: 100%;
+  }
+
 }
