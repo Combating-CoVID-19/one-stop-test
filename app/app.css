@@ -20,6 +20,7 @@
   --dropdown-bg-col: black;
   --dropdown-txt-col: white;
   --txt-bg-col: white;
+  --border-news-clr: rgb(185, 185, 185);
 }
 
 
@@ -328,13 +329,15 @@ a {
   height: 80vh;
   flex-basis: 40%;
   border-left: thin solid;
-  border-color: black;
+  border-color: var(--border-news-clr);
 
 }
 
 @media screen and (max-width: 767px) {
   .news-flex-module {
     flex-basis: 100%;
+    border-left: none;
+    border-top: thin solid;
   }
 
 }
