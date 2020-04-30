@@ -10,7 +10,7 @@
   --dropdown-txt-col:white;
   --header-txt-col-hover: rgb(175, 175, 175);
   --txt-bg-col: black;
-  --txt-desc-color: rgb(139, 139, 139);
+  --txt-desc-color: rgb(65, 65, 65);
 
 }
 
@@ -23,6 +23,7 @@
   --dropdown-txt-col: white;
   --txt-bg-col: white;
   --border-news-clr: rgb(185, 185, 185);
+  --txt-desc-color: lightgray;
 }
 
 
