@@ -46,6 +46,7 @@ function build(keykey) {
     title.appendChild(titleInner)
     titleInner.classList.add('news-link')
     $(titleInner).attr('href', urls[keykey] )
+    $(titleInner).attr('target', "_blank")
 
     var description = document.createElement("h6");
     description.innerHTML = descriptions[keykey];
@@ -67,6 +68,7 @@ function build(keykey) {
     btn.innerHTML = "Continue reading..";
     btn.id = "contBTN";
     btn.href = urls[keykey];
+    $(btn).attr('target', '_blank')
     contDiv1.appendChild(btn);
     ncd.appendChild(contDiv1);
 }
