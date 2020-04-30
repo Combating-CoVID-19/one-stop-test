@@ -16,7 +16,7 @@ var currentHeadline;
 var newsData = firebase.database().ref('News/');
 console.log(newsData);
 
-newsData.on('value', function (snapshot) {
+newsData.once('value').then( function (snapshot) {
     headlines = [];
     console.log(snapshot.val());
     retrievedData = snapshot.val();
