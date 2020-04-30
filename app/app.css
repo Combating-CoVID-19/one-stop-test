@@ -338,12 +338,18 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+/* .break {
+  display: none;
+} */
+
 @media screen and (max-width: 767px) {
   .news-flex-module {
+    margin-top: 10px;
     flex-basis: 100%;
     border-left: none;
     border-top: thin solid;
     border-color: var(--border-news-clr);
   }
+
 
 }
