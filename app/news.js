@@ -46,11 +46,15 @@ function build(keykey) {
     title.classList.add("title");
     ncd.appendChild(title);
 
+    var description = document.createElement("h6");
+    description.innerHTML = descriptions[keykey];
+    ncd.appendChild(description);
+
     var flexdiv1 = document.createElement("div");
     var source = document.createElement("h5");
     var date = document.createElement("h5");
     source.innerHTML = sourceNames[keykey];
-    date.innerHTML = dates[keykey].substring(0, 9);
+    date.innerHTML = dates[keykey];
     flexdiv1.appendChild(source);
     flexdiv1.appendChild(date);
     flexdiv1.classList.add("flexdiv");
