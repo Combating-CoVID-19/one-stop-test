@@ -293,7 +293,7 @@ div button a.hmm {
   height:100px;
   /* height: 15%; */
   /* filter: grayscale(50%) blur(6px); */
-  flex-basis: 16.6666666667%;
+  flex-basis: 20%;
 }
 
 
@@ -311,12 +311,12 @@ div button a.hmm {
 }
 
 .shopping-module {
-  flex-basis: 16.6666666667%;
+  flex-basis: 20%;
 }
 
 .flex-module{
   flex-grow: 1;
-  flex-basis: 16.6666666667%;
+  flex-basis: 20%;
 }
 
 a {
@@ -326,5 +326,5 @@ a {
 .news-flex-module {
   flex-grow: 2;
   height: 80vh;
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
