@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Titillium+Web:ital,wght@0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 
 :root {
   --bg-color: white;
@@ -362,5 +363,28 @@ a {
   text-align:left;
   margin-left:10px;
   font-family: 'Roboto', sans-serif;
+  /* color:red; */
+}
+
+.flexdiv {
+  display:flex;
+}
+
+h5 {
+  flex-grow:1;
+  text-align:left;
+  color:gray;
+  font-family: 'Manrope', sans-serif;
+  margin-bottom:0px;
+  margin-top:0px;
+  margin-left:10px;
+  width:50%;
   color:red;
+}
+
+#show-more {
+  text-decoration: underline;
+  float:right;
+  font-family: 'Manrope', sans-serif;
+  margin-right:20px;
 }
