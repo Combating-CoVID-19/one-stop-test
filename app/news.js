@@ -45,11 +45,14 @@ newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( functio
 
 function build(keykey) {
     var ncd = document.getElementById("nCD");
+    var anchor = document.createElement("a")
     var title = document.createElement("h3");
     var titleInner = document.createElement('a')
     titleInner.innerHTML = headlines[keykey];
     title.classList.add("title");
-    ncd.appendChild(title);
+    // ncd.appendChild(title);
+    ncd.appendChild(anchor)
+    anchor.appendChild(title)
     title.appendChild(titleInner)
     titleInner.classList.add('news-link')
     $(titleInner).attr('href', urls[keykey] )
@@ -67,12 +70,14 @@ function build(keykey) {
     flexdiv1.appendChild(source);
     flexdiv1.appendChild(date);
     // flexdiv1.classList.add("flexdiv");
-    ncd.appendChild(flexdiv1);
+    // ncd.appendChild(flexdiv1);
+    anchor.appendChild(flexdiv1)
+    $(anchor).attr('href', urls[keykey])
 
 
-    var description = document.createElement("h6");
+    var description = document.createElement("p");
     description.innerHTML = descriptions[keykey];
-    ncd.appendChild(description);
+    anchor.appendChild(description);
 
 
 
@@ -83,8 +88,9 @@ function build(keykey) {
     btn.id = "contBTN";
     btn.href = urls[keykey];
     $(btn).attr('target', '_blank')
-    contDiv1.appendChild(btn);
-    description.appendChild(contDiv1);
+    // contDiv1.appendChild(btn);
+    // description.appendChild(contDiv1);
+    // description.innerHTML += "<a href='"+urls[keykey]+"'>..continue reading..</a>";
 }
 
 

@@ -407,6 +407,13 @@ h6 {
   margin-right:20px;
 }
 
+p {
+  text-align: left;
+  margin-left: 10px;
+  color: var(--txt-desc-color);
+  margin-top: 0;
+}
+
 h6 {
   margin-left: 10px;
   text-align: left;
