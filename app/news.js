@@ -55,10 +55,6 @@ function build(keykey) {
     $(titleInner).attr('href', urls[keykey] )
     $(titleInner).attr('target', "_blank")
 
-    var description = document.createElement("h6");
-    description.innerHTML = descriptions[keykey];
-    ncd.appendChild(description);
-
     var flexdiv1 = document.createElement("div");
     var source = document.createElement("h5");
     var date = document.createElement("h5");
@@ -72,6 +68,13 @@ function build(keykey) {
     flexdiv1.appendChild(date);
     flexdiv1.classList.add("flexdiv");
     ncd.appendChild(flexdiv1);
+
+
+    var description = document.createElement("h6");
+    description.innerHTML = descriptions[keykey];
+    ncd.appendChild(description);
+
+
 
     var contDiv1 = document.createElement("div");
     contDiv1.id = "contDiv";
