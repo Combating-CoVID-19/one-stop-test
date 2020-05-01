@@ -97,7 +97,7 @@ function build(keykey) {
 
 
 function loadMoreNews(){
-    newsData.orderByChild("PublishDate").startAt(11).on('child_added',  function (snapshot) {
+    newsData.orderByChild("PublishDate").startAt(11).on('value',  function (snapshot) {
 
         console.log(snapshot.val())
 
