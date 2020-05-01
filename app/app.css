@@ -395,6 +395,10 @@ h5 {
   color:red;
 }
 
+h5:hover {
+  color: var(--header-txt-col-hover)
+}
+
 h6 {
   margin-top: 0;
   color: var(--txt-desc-color)
@@ -414,6 +418,10 @@ p {
   margin-left: 10px;
   color: var(--txt-desc-color);
   margin-top: 0;
+}
+
+p:hover {
+  color: var(--header-txt-col-hover)
 }
 
 h6 {
