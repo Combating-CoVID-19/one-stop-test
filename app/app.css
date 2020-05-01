@@ -408,6 +408,7 @@ h6 {
 }
 
 p {
+  font-size:12px;
   text-align: left;
   margin-left: 10px;
   color: var(--txt-desc-color);

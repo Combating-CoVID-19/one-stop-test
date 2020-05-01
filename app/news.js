@@ -61,14 +61,16 @@ function build(keykey) {
     var flexdiv1 = document.createElement("div");
     var source = document.createElement("h5");
     var date = document.createElement("h5");
-    source.innerHTML = sourceNames[keykey];
+
     articleDate = new Date((dates[keykey]))
-    // articleDate = dates[keykey]
+
     articleDate = articleDate.toString();
-    articleDate = articleDate.substring(0, 15);
-    date.innerHTML = articleDate;
+    articleDate = articleDate.substring(0, 11);
+
+    source.innerHTML = sourceNames[keykey] + "    •    " + articleDate;
+
     flexdiv1.appendChild(source);
-    flexdiv1.appendChild(date);
+    // flexdiv1.appendChild(date);
     // flexdiv1.classList.add("flexdiv");
     // ncd.appendChild(flexdiv1);
     anchor.appendChild(flexdiv1)
