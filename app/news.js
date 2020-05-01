@@ -56,7 +56,11 @@ function build(keykey) {
     var source = document.createElement("h5");
     var date = document.createElement("h5");
     source.innerHTML = sourceNames[keykey];
-    date.innerHTML = dates[keykey];
+    articleDate = new Date(dates[keykey])
+    
+    articleDate = articleDate.toString();
+    articleDate = articleDate.substring(0, 15);
+    date.innerHTML = articleDate;
     flexdiv1.appendChild(source);
     flexdiv1.appendChild(date);
     flexdiv1.classList.add("flexdiv");
