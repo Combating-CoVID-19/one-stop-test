@@ -59,14 +59,14 @@ function build(keykey) {
     var source = document.createElement("h5");
     var date = document.createElement("h5");
     source.innerHTML = sourceNames[keykey];
-    // articleDate = new Date(dates[keykey])
-    articleDate = dates[keykey]
+    articleDate = new Date((dates[keykey]))
+    // articleDate = dates[keykey]
     articleDate = articleDate.toString();
     articleDate = articleDate.substring(0, 15);
     date.innerHTML = articleDate;
     flexdiv1.appendChild(source);
     flexdiv1.appendChild(date);
-    flexdiv1.classList.add("flexdiv");
+    // flexdiv1.classList.add("flexdiv");
     ncd.appendChild(flexdiv1);
 
 
@@ -79,12 +79,12 @@ function build(keykey) {
     var contDiv1 = document.createElement("div");
     contDiv1.id = "contDiv";
     var btn = document.createElement("a");
-    btn.innerHTML = "Continue reading..";
+    btn.innerHTML = "..continue reading..";
     btn.id = "contBTN";
     btn.href = urls[keykey];
     $(btn).attr('target', '_blank')
     contDiv1.appendChild(btn);
-    ncd.appendChild(contDiv1);
+    description.appendChild(contDiv1);
 }
 
 
