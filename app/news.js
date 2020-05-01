@@ -13,16 +13,16 @@ var urlforimages = [];
 
 var openedHeadlines;
 
-
+    var x = 0;
 var currentHeadline;
 var newsData = firebase.database().ref('News/');
 
 
-newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( function (snapshot) {
+newsData.orderByChild('PublishDate').once('value').then( function (snapshot) {
     headlines = [];
-
+    x=0;
     retrievedData = snapshot.val();
-    var x = 0;
+
     for (var key in retrievedData) {
       if (retrievedData.hasOwnProperty(key)) {
         headlines.push(retrievedData[key].Title);
@@ -35,7 +35,7 @@ newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( functio
       }
     }
     var con;
-    for(con=x-1; con>-1; con--) {
+    for(con=9; con>-1; con--) {
           build(con);
     }
 
@@ -97,9 +97,7 @@ function build(keykey) {
 
 
 function loadMoreNews(){
-    newsData.orderByChild("PublishDate").startAt(11).on('value',  function (snapshot) {
-
-        console.log(snapshot.val())
-
-    })
+  for(con=x-1; con>9; con--) {
+        build(con);
+  }
 }
