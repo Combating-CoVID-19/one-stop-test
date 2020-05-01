@@ -424,3 +424,8 @@ h6 {
   text-align: right;
   margin-top:5px;
 }
+
+.row {
+  display:flex;
+  flex-grow:15;
+}
