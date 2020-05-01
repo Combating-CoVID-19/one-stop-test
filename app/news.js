@@ -18,7 +18,7 @@ var currentHeadline;
 var newsData = firebase.database().ref('News/');
 
 
-newsData.orderByChild('PublishDate').once('value').then( function (snapshot) {
+newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( function (snapshot) {
     headlines = [];
     x=0;
     retrievedData = snapshot.val();
@@ -97,7 +97,8 @@ function build(keykey) {
 
 
 function loadMoreNews(){
-  for(con=x-1; con>9; con--) {
+  for(con=x-1; con>openedHeadlines; con--) {
         build(con);
   }
+  openedHeadlines += 10
 }
