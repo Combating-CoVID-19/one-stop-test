@@ -80,6 +80,7 @@ function build(keykey) {
     // articleDate = articleDate.substring(0, 11);
 
     source.innerHTML = sourceNames[keykey] + "    •    " + articleDate;
+    $(anchor).attr('target', "_blank")
 
     flexdiv1.appendChild(source);
     // flexdiv1.appendChild(date);
