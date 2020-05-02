@@ -44,6 +44,7 @@ newsData.orderByChild('PublishDate').limitToLast(10).once('value').then( functio
 
 
 function build(keykey) {
+    var articleDate = '';
     var ncd = document.getElementById("nCD");
     var anchor = document.createElement("a")
     var title = document.createElement("h3");
@@ -61,11 +62,22 @@ function build(keykey) {
     var flexdiv1 = document.createElement("div");
     var source = document.createElement("h5");
     var date = document.createElement("h5");
-
-    articleDate = new Date((dates[keykey]))
-
-    articleDate = articleDate.toString();
-    articleDate = articleDate.substring(0, 11);
+    var articleDay = ''
+    // articleDate = new Date((dates[keykey]))
+    var d,
+    days,
+    months;
+    
+    d = new Date(dates[keykey]);
+    days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // console.log(days[d.getUTCDay()]);
+    articleDate += days[d.getUTCDay()] +', '
+    articleDate += months[d.getUTCMonth()] + ' '
+    articleDay = d.getUTCDate().toString()
+    articleDate += articleDay;
+    // articleDate = articleDate.toString();
+    // articleDate = articleDate.substring(0, 11);
 
     source.innerHTML = sourceNames[keykey] + "    •    " + articleDate;
 
@@ -97,6 +109,10 @@ function build(keykey) {
 
 
 function loadMoreNews(){
+
+    newsData.orderByChild('PublishDate').startAt("2020-04-21").endAt("2020-04-23").once('value').then(function(snapshot){
+        console.log(snapshot.val())
+    })
   for(con=x-1; con>openedHeadlines; con--) {
         build(con);
   }

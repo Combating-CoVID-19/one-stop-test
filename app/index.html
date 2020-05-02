@@ -28,17 +28,62 @@
         <!-- Page Add-ons (can be loaded later) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+      <!-- App -->
+      
+      <script src="../main/scripts/turbolinks.js">
+        Turbolinks.start()
+        Turbolinks.setProgressBarDelay(1)
+      </script>
+
+            <!-- REACT START -->
+
+            <script crossorigin src="https://unpkg.com/react@15/dist/react.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+            <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+
+
+           <!--FIREBASE-->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+
+        <script>
+        // web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCDxdcGwKOcrGsXGxvhFamN7aHuylni_60",
+            authDomain: "combating-covid-19.firebaseapp.com",
+            databaseURL: "https://combating-covid-19.firebaseio.com",
+            projectId: "combating-covid-19",
+            storageBucket: "combating-covid-19.appspot.com",
+            messagingSenderId: "174988804680",
+            appId: "1:174988804680:web:4749b323ee6d9f05ae4e7d",
+            measurementId: "G-F72E6QSDCM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+
+             <!--FINAL IMPORTS-->
+      
+      <script src="../main/scripts/pageTheme.js" defer></script>
+      <script src="app.js" defer></script>
+
+
+
         <!-- PAGE INFO -->
 
         <title>App | Pandemicalm</title>
     </head>
     <body>
 
-      <!-- REACT START -->
 
-      <script crossorigin src="https://unpkg.com/react@15/dist/react.js"></script>
-      <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-      <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
 
 
       <!-- REACT END -->
@@ -150,39 +195,12 @@
 
       <footer> <a href="https://icons8.com/">Icons by Icons8</a> </footer>
 
-      <!--FINAL IMPORTS-->
-      <script src="../main/scripts/pageTheme.js"></script>
-      <script src="app.js"></script>
+ 
 
 </body>
 
 
-        <!--FIREBASE-->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-            <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
-
-        <script>
-        // web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCDxdcGwKOcrGsXGxvhFamN7aHuylni_60",
-            authDomain: "combating-covid-19.firebaseapp.com",
-            databaseURL: "https://combating-covid-19.firebaseio.com",
-            projectId: "combating-covid-19",
-            storageBucket: "combating-covid-19.appspot.com",
-            messagingSenderId: "174988804680",
-            appId: "1:174988804680:web:4749b323ee6d9f05ae4e7d",
-            measurementId: "G-F72E6QSDCM"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        </script>
+     
 
 
         <script>
