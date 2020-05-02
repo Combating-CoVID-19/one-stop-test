@@ -286,18 +286,23 @@ div button a.hmm {
   display: flex;
   text-align: center;
   height: 80vh;
-  /* justify-content: center; */
-  /* align-items: center; */
+  /* justify-content: center;  */
+  /* align-items: center;  */
   flex-wrap: wrap;
   align-content: space-between;
+  
+  /* flex-flow: wrap-reverse; */
 }
 
 .covid-tracker-module{
   color: var(--txt-bg-col);
   height:100px;
+  width: 100px;
   /* height: 15%; */
   /* filter: grayscale(50%) blur(6px); */
-  flex-basis: 20%;
+  /* flex-basis: 33.333%;*/
+  /* flex: 1 1 calc(33.33% - 20px);  */
+  flex: 1 1 calc(33.33% - 20px);
 }
 
 
@@ -320,8 +325,7 @@ div button a.hmm {
 }
 
 .flex-module{
-  flex-grow: 1;
-  flex-basis: 20%;
+  flex: 1 1 calc(33.33% - 20px);
 }
 
 a {
@@ -346,7 +350,7 @@ a {
   display: none;
 } */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1517px){
   .news-flex-module {
     margin-top: 10px;
     flex-basis: 100%;
@@ -357,6 +361,10 @@ a {
   .news-flex-module {
     overflow-y: visible !important;
   }
+
+}
+
+@media screen and (max-width: 767px) {
 
 
 }
@@ -445,4 +453,5 @@ h6 {
 .row {
   display:flex;
   flex-grow:15;
+  flex-wrap: wrap;
 }
