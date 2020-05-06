@@ -322,3 +322,12 @@ div button a.hmm {
   margin-right: 5%;
   color:var(--txt-bg-col);
 }
+
+.space {
+  height:100px;
+}
+
+.img {
+  width:90%;
+  height:auto;
+}
