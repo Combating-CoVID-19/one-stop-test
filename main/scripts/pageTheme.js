@@ -1,6 +1,6 @@
 var currentTheme = localStorage.getItem('page-theme');
 var autoTheme = localStorage.getItem('auto-page-theme');
-const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+var mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
 var autoThemeBtn = document.getElementById('auto-theme-btn');
 
 function checkTheme() {
