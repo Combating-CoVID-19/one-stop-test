@@ -21,6 +21,11 @@ body {
     list-style: none;
 }
 
+h3 {
+color: var(--tracker-text-color);
+font-family: sans-serif;
+font-weight:100;
+}
 
 
 li:hover {
