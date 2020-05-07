@@ -1,6 +1,10 @@
 var bar = document.getElementById("search-bar")
 var amazon = document.getElementById('amazon')
 
+
+
+$(amazon).hide()
+
 function search(){
     if(bar.value == null || bar.value == ' ' || bar.value == ''){
         console.log('empty search field')
