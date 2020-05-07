@@ -1,11 +1,11 @@
 var bar = document.getElementById("search-bar")
 var amazon = document.getElementById('amazon')
 var google = document.getElementById('google-express')
-// var ebay = document.getElementById('ebay')
+var target = document.getElementById('target')
 
 $(amazon).hide()
 $(google).hide()
-$(ebay).hide()
+$(target).hide()
 
 
 function search(){
@@ -13,19 +13,19 @@ function search(){
         console.log('empty search field')
         $(amazon).hide()
         $(google).hide()
-        // $(ebay).hide()
+        // $(target).hide()
 
     } else {
     $(amazon).show()
     $(google).show()
-    // $(ebay).show()
+    $(target).show()
     // console.log('Search query: '+bar.value)
     // amazon.innerHTML = 'Search Amazon for ' + bar.value;
     // google.innerHTML = "Search Google Shopping for " + bar.value;
-    // ebay.innerHTML = 'Search Ebay for ' + bar.value;
+    // target.innerHTML = 'Search Ebay for ' + bar.value;
     $(amazon).attr('href', 'https://www.amazon.com/s?k='+bar.value)
     $(google).attr('href', 'https://shopping.google.com/search?q='+bar.value)
-    // $(ebay).attr('href')
+    $(target).attr('href', 'https://www.target.com/s?searchTerm='+bar.value)
 }
 
 
