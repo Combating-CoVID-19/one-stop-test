@@ -1,7 +1,19 @@
 
-#amazon {
+/* #amazon {
     background-color: rgb(236, 167, 16);
     padding: 15px;
     display: block;
     margin-top: 20px;
+}
+
+#google-express {
+    padding: 15px;
+    display: block;
+    margin-top: 20px;
+} */
+
+img {
+    width: 45px;
+    margin-left: 10px;
+    margin: 10px;
 }
