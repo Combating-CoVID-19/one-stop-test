@@ -2,4 +2,6 @@
 #amazon {
     background-color: rgb(236, 167, 16);
     padding: 15px;
+    display: block;
+    margin-top: 20px;
 }
